@@ -100,19 +100,47 @@
 
 <hr>
 
-<p>My setup for this website is actually really nice, much better than my usual way of doing things. The actual website uses <a href="http://jekyllrb.com/">Jekyll</a>, which is an amazing little static site generator. </p>
+<p>My setup for this is way better than my usual way of doing things. The actual website uses <a href="http://jekyllrb.com/">Jekyll</a>, which is an amazing little static site generator. </p>
 
-<h1>Jekyll &amp; Hyde</h1>
+<h1>Maybe Not Being Myself Isn&#39;t So Bad</h1>
 
-<p>I came across <a href="http://alexbilbie.com/">Alex Bilbie&#39;s</a> website while I doing an investigation into <a href="http://alexbilbie.com/2015/04/oauth-open-redirector-attack/">OAuth</a> and the look caught my eye. I found out he used <a href="http://hyde.getpoole.com/">Hyde</a>, which is a theme for Jekyll, and decided why not.</p>
+<p>I came across <a href="http://alexbilbie.com/">Alex Bilbie&#39;s</a> website while doing an investigation into <a href="http://alexbilbie.com/2015/04/oauth-open-redirector-attack/">OAuth</a> and the look caught my eye. I found out he used <a href="http://hyde.getpoole.com/">Hyde</a>, which is a theme for Jekyll, and decided why not.</p>
 
-<p>Jekyll is essentially a little <a href="https://wordpress.org/">CMS</a> that can do whatever you want it to. The blog posts are generated from Markdown files in the _posts folder, Hyde&#39;s sidebar links are generated from any files that have <a href="http://yaml.org/">YAML</a> front matter blocks, and from there you can change things as much or as little as you want.</p>
+<p>Jekyll is basically a little <a href="https://wordpress.org/">CMS</a> that can do whatever you want it to. The blog posts are generated from <a href="http://daringfireball.net/projects/markdown/">Markdown</a> files in the <code>_posts</code> folder, Hyde generates sidebar links from any files that have <a href="http://yaml.org/">YAML</a> a certain block at the top, and from there you can change things as much or as little as you want.</p>
 
-<p>I changed the theme color to green, changed the font of the title, and now I&#39;m a web designer.</p>
+<p>I changed the color, the font of the title, wrote my name and now I&#39;m a web designer.</p>
 
-<h1>Home is where you make it</h1>
+<h1>Sometimes I Feel Like This Isn&#39;t Home</h1>
 
-<p>I finally decided to try out <a href="https://www.vagrantup.com/">Vagrant</a> the other day with Laravel Homestead, and it was one of the better choices I&#39;ve made recently. </p>
+<p>I finally decided to try out <a href="https://www.vagrantup.com/">Vagrant</a> the other day with <a href="http://laravel.com/docs/5.0/homestead">Laravel Homestead</a>, and it was one of the better choices I&#39;ve made recently.</p>
+
+<p>Clutter sucks, I have a lot of it, and need less. I&#39;m using OS X and my old setup was a local MAMP server, an FTP client for use with a VPS, and a text editor. Now, I&#39;m sure I could have set this up a little better, but my computer was (still is) a goddamn mess with different development tools, folders, and files. Vagrant allows you to always have a nice new environment to work with. You just add a box, initialize it, do a little configuring of folders and mapping hostnames, and start it up. Once you have everything setup the way you want, you can save the box and start with a fresh environment if (when) you fuck up.</p>
+
+<p>I&#39;m using the same <a href="https://atlas.hashicorp.com/laravel/boxes/homestead">laravel/homestead</a> box for a couple different projects. As far as the website, installation went like this:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">vagrant ssh
+[Navigate to mapped folder]
+sudo apt-get ruby ruby-dev git
+gem install jekyll
+git clone https://github.com/poole/hyde.git .
+[Edit config.yaml accordingly]
+jekyll build
+serve personal.dev /home/vagrant/dev/personal/ 80
+exit
+[Edit host file accordingly]
+</code></pre></div>
+<h1>Life Gits To Me A Lot</h1>
+
+<p>Now... I know I should of been using <a href="http://git-scm.com/">Git</a> the whole time. I really should of, but I wasn&#39;t. Why, Why didn&#39;t I, it&#39;s so good...</p>
+
+<p>I followed this <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-automatic-deployment-with-git-with-a-vps">DigitalOcean</a> tutorial on the matter and pretty much have same thing that Jekyll&#39;s <a href="http://jekyllrb.com/docs/deployment-methods/#git-post-receive-hook">documentation</a> has for the post-receive hook.</p>
+
+<p>My workflow is so nice now. I edit, or make a post or something, make a commit, and push it to live/master, it uploads to the VPS and Github, and I have a post-receive Git hook that compiles everything and updates the wesbite.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">git add -A
+git commit -m &quot;I&#39;m making a commitment&quot;
+git push live master
+[magic]
+</code></pre></div>
+<h3>And I&#39;m probably doing this all wrong. Oh well.</h3>
 
   </div>
   

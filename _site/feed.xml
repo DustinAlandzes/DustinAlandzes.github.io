@@ -5,8 +5,8 @@
     <description>Person.</description>
     <link>http://dustin.alandz.es//</link>
     <atom:link href="http://dustin.alandz.es//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Apr 2015 10:10:49 +0000</pubDate>
-    <lastBuildDate>Thu, 23 Apr 2015 10:10:49 +0000</lastBuildDate>
+    <pubDate>Thu, 23 Apr 2015 12:11:35 +0000</pubDate>
+    <lastBuildDate>Thu, 23 Apr 2015 12:11:35 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -17,19 +17,47 @@
 
 &lt;hr&gt;
 
-&lt;p&gt;My setup for this website is actually really nice, much better than my usual way of doing things. The actual website uses &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, which is an amazing little static site generator. &lt;/p&gt;
+&lt;p&gt;My setup for this is way better than my usual way of doing things. The actual website uses &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, which is an amazing little static site generator. &lt;/p&gt;
 
-&lt;h1&gt;Jekyll &amp;amp; Hyde&lt;/h1&gt;
+&lt;h1&gt;Maybe Not Being Myself Isn&amp;#39;t So Bad&lt;/h1&gt;
 
-&lt;p&gt;I came across &lt;a href=&quot;http://alexbilbie.com/&quot;&gt;Alex Bilbie&amp;#39;s&lt;/a&gt; website while I doing an investigation into &lt;a href=&quot;http://alexbilbie.com/2015/04/oauth-open-redirector-attack/&quot;&gt;OAuth&lt;/a&gt; and the look caught my eye. I found out he used &lt;a href=&quot;http://hyde.getpoole.com/&quot;&gt;Hyde&lt;/a&gt;, which is a theme for Jekyll, and decided why not.&lt;/p&gt;
+&lt;p&gt;I came across &lt;a href=&quot;http://alexbilbie.com/&quot;&gt;Alex Bilbie&amp;#39;s&lt;/a&gt; website while doing an investigation into &lt;a href=&quot;http://alexbilbie.com/2015/04/oauth-open-redirector-attack/&quot;&gt;OAuth&lt;/a&gt; and the look caught my eye. I found out he used &lt;a href=&quot;http://hyde.getpoole.com/&quot;&gt;Hyde&lt;/a&gt;, which is a theme for Jekyll, and decided why not.&lt;/p&gt;
 
-&lt;p&gt;Jekyll is essentially a little &lt;a href=&quot;https://wordpress.org/&quot;&gt;CMS&lt;/a&gt; that can do whatever you want it to. The blog posts are generated from Markdown files in the _posts folder, Hyde&amp;#39;s sidebar links are generated from any files that have &lt;a href=&quot;http://yaml.org/&quot;&gt;YAML&lt;/a&gt; front matter blocks, and from there you can change things as much or as little as you want.&lt;/p&gt;
+&lt;p&gt;Jekyll is basically a little &lt;a href=&quot;https://wordpress.org/&quot;&gt;CMS&lt;/a&gt; that can do whatever you want it to. The blog posts are generated from &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; files in the &lt;code&gt;_posts&lt;/code&gt; folder, Hyde generates sidebar links from any files that have &lt;a href=&quot;http://yaml.org/&quot;&gt;YAML&lt;/a&gt; a certain block at the top, and from there you can change things as much or as little as you want.&lt;/p&gt;
 
-&lt;p&gt;I changed the theme color to green, changed the font of the title, and now I&amp;#39;m a web designer.&lt;/p&gt;
+&lt;p&gt;I changed the color, the font of the title, wrote my name and now I&amp;#39;m a web designer.&lt;/p&gt;
 
-&lt;h1&gt;Home is where you make it&lt;/h1&gt;
+&lt;h1&gt;Sometimes I Feel Like This Isn&amp;#39;t Home&lt;/h1&gt;
 
-&lt;p&gt;I finally decided to try out &lt;a href=&quot;https://www.vagrantup.com/&quot;&gt;Vagrant&lt;/a&gt; the other day with Laravel Homestead, and it was one of the better choices I&amp;#39;ve made recently. &lt;/p&gt;
+&lt;p&gt;I finally decided to try out &lt;a href=&quot;https://www.vagrantup.com/&quot;&gt;Vagrant&lt;/a&gt; the other day with &lt;a href=&quot;http://laravel.com/docs/5.0/homestead&quot;&gt;Laravel Homestead&lt;/a&gt;, and it was one of the better choices I&amp;#39;ve made recently.&lt;/p&gt;
+
+&lt;p&gt;Clutter sucks, I have a lot of it, and need less. I&amp;#39;m using OS X and my old setup was a local MAMP server, an FTP client for use with a VPS, and a text editor. Now, I&amp;#39;m sure I could have set this up a little better, but my computer was (still is) a goddamn mess with different development tools, folders, and files. Vagrant allows you to always have a nice new environment to work with. You just add a box, initialize it, do a little configuring of folders and mapping hostnames, and start it up. Once you have everything setup the way you want, you can save the box and start with a fresh environment if (when) you fuck up.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m using the same &lt;a href=&quot;https://atlas.hashicorp.com/laravel/boxes/homestead&quot;&gt;laravel/homestead&lt;/a&gt; box for a couple different projects. As far as the website, installation went like this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;vagrant ssh
+[Navigate to mapped folder]
+sudo apt-get ruby ruby-dev git
+gem install jekyll
+git clone https://github.com/poole/hyde.git .
+[Edit config.yaml accordingly]
+jekyll build
+serve personal.dev /home/vagrant/dev/personal/ 80
+exit
+[Edit host file accordingly]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;Life Gits To Me A Lot&lt;/h1&gt;
+
+&lt;p&gt;Now... I know I should of been using &lt;a href=&quot;http://git-scm.com/&quot;&gt;Git&lt;/a&gt; the whole time. I really should of, but I wasn&amp;#39;t. Why, Why didn&amp;#39;t I, it&amp;#39;s so good...&lt;/p&gt;
+
+&lt;p&gt;I followed this &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-set-up-automatic-deployment-with-git-with-a-vps&quot;&gt;DigitalOcean&lt;/a&gt; tutorial on the matter and pretty much have same thing that Jekyll&amp;#39;s &lt;a href=&quot;http://jekyllrb.com/docs/deployment-methods/#git-post-receive-hook&quot;&gt;documentation&lt;/a&gt; has for the post-receive hook.&lt;/p&gt;
+
+&lt;p&gt;My workflow is so nice now. I edit, or make a post or something, make a commit, and push it to live/master, it uploads to the VPS and Github, and I have a post-receive Git hook that compiles everything and updates the wesbite.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;git add -A
+git commit -m &amp;quot;I&amp;#39;m making a commitment&amp;quot;
+git push live master
+[magic]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;And I&amp;#39;m probably doing this all wrong. Oh well.&lt;/h3&gt;
 </description>
         <pubDate>Thu, 23 Apr 2015 00:00:00 +0000</pubDate>
         <link>http://dustin.alandz.es//2015/04/23/hello-world/</link>
