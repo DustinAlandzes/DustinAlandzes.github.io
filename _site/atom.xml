@@ -1,17 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Dustin Alandzes</title>
-    <description>Person.</description>
-    <link>http://dustin.alandz.es//</link>
-    <atom:link href="http://dustin.alandz.es//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Apr 2015 05:18:29 +0000</pubDate>
-    <lastBuildDate>Thu, 23 Apr 2015 05:18:29 +0000</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Dustin Alandzes</title>
+ <link href="http://dustin.alandz.es/atom.xml" rel="self"/>
+ <link href="http://dustin.alandz.es/"/>
+ <updated>2015-04-23T05:18:29+00:00</updated>
+ <id>http://dustin.alandz.es</id>
+ <author>
+   <name>Dustin Alandzes</name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>Welcome to Jekyll!</title>
+   <link href="http://dustin.alandz.es/jekyll/update/2015/04/23/welcome-to-jekyll/"/>
+   <updated>2015-04-23T04:04:41+00:00</updated>
+   <id>http://dustin.alandz.es/jekyll/update/2015/04/23/welcome-to-jekyll</id>
+   <content type="html">&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
@@ -24,21 +30,15 @@
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 23 Apr 2015 04:04:41 +0000</pubDate>
-        <link>http://dustin.alandz.es//jekyll/update/2015/04/23/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://dustin.alandz.es//jekyll/update/2015/04/23/welcome-to-jekyll/</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>Introducing Hyde</title>
-        <description>&lt;p&gt;Hyde is a brazen two-column &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; theme that pairs a prominent sidebar with uncomplicated content. It&amp;#39;s based on &lt;a href=&quot;http://getpoole.com&quot;&gt;Poole&lt;/a&gt;, the Jekyll butler.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Introducing Hyde</title>
+   <link href="http://dustin.alandz.es/2013/12/28/introducing-hyde/"/>
+   <updated>2013-12-28T00:00:00+00:00</updated>
+   <id>http://dustin.alandz.es/2013/12/28/introducing-hyde</id>
+   <content type="html">&lt;p&gt;Hyde is a brazen two-column &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; theme that pairs a prominent sidebar with uncomplicated content. It&amp;#39;s based on &lt;a href=&quot;http://getpoole.com&quot;&gt;Poole&lt;/a&gt;, the Jekyll butler.&lt;/p&gt;
 
 &lt;h3&gt;Built on Poole&lt;/h3&gt;
 
@@ -74,17 +74,15 @@
 &lt;p&gt;Hyde is developed on and hosted with GitHub. Head to the &lt;a href=&quot;https://github.com/poole/hyde&quot;&gt;GitHub repository&lt;/a&gt; for downloads, bug reports, and features requests.&lt;/p&gt;
 
 &lt;p&gt;Thanks!&lt;/p&gt;
-</description>
-        <pubDate>Sat, 28 Dec 2013 00:00:00 +0000</pubDate>
-        <link>http://dustin.alandz.es//2013/12/28/introducing-hyde/</link>
-        <guid isPermaLink="true">http://dustin.alandz.es//2013/12/28/introducing-hyde/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Example content</title>
-        <description>&lt;div class=&quot;message&quot;&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Example content</title>
+   <link href="http://dustin.alandz.es/2012/02/07/example-content/"/>
+   <updated>2012-02-07T00:00:00+00:00</updated>
+   <id>http://dustin.alandz.es/2012/02/07/example-content</id>
+   <content type="html">&lt;div class=&quot;message&quot;&gt;
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
 &lt;/div&gt;
 
@@ -222,17 +220,15 @@
 &lt;hr&gt;
 
 &lt;p&gt;Want to see something else added? &lt;a href=&quot;https://github.com/poole/poole/issues/new&quot;&gt;Open an issue.&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 07 Feb 2012 00:00:00 +0000</pubDate>
-        <link>http://dustin.alandz.es//2012/02/07/example-content/</link>
-        <guid isPermaLink="true">http://dustin.alandz.es//2012/02/07/example-content/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>What&#39;s Jekyll?</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&quot;https://github.com/mojombo/jekyll/blob/master/README.markdown&quot;&gt;the project&amp;#39;s readme&lt;/a&gt;:&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>What's Jekyll?</title>
+   <link href="http://dustin.alandz.es/2012/02/06/whats-jekyll/"/>
+   <updated>2012-02-06T00:00:00+00:00</updated>
+   <id>http://dustin.alandz.es/2012/02/06/whats-jekyll</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&quot;https://github.com/mojombo/jekyll/blob/master/README.markdown&quot;&gt;the project&amp;#39;s readme&lt;/a&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Jekyll is a simple, blog aware, static site generator. It takes a template directory [...] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.&lt;/p&gt;
@@ -241,13 +237,8 @@
 &lt;p&gt;It&amp;#39;s an immensely useful tool and one we encourage you to use here with Hyde.&lt;/p&gt;
 
 &lt;p&gt;Find out more by &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;visiting the project on GitHub&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 06 Feb 2012 00:00:00 +0000</pubDate>
-        <link>http://dustin.alandz.es//2012/02/06/whats-jekyll/</link>
-        <guid isPermaLink="true">http://dustin.alandz.es//2012/02/06/whats-jekyll/</guid>
-        
-        
-      </item>
-    
-  </channel>
-</rss>
+</content>
+ </entry>
+ 
+
+</feed>
