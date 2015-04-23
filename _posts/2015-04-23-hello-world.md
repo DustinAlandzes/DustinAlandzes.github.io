@@ -13,7 +13,7 @@ My setup for this is much better than my usual way of doing things. The actual w
 
 #Jekyll & Hyde
 
-I came across [Alex Bilbie's](http://alexbilbie.com/) website while I doing an investigation into [OAuth](http://alexbilbie.com/2015/04/oauth-open-redirector-attack/) and the look caught my eye. I found out he used [Hyde](http://hyde.getpoole.com/), which is a theme for Jekyll, and decided why not.
+I came across [Alex Bilbie's](http://alexbilbie.com/) website while doing an investigation into [OAuth](http://alexbilbie.com/2015/04/oauth-open-redirector-attack/) and the look caught my eye. I found out he used [Hyde](http://hyde.getpoole.com/), which is a theme for Jekyll, and decided why not.
 
 Jekyll is essentially a little [CMS](https://wordpress.org/) that can do whatever you want it to. The blog posts are generated from Markdown files in the _posts folder, Hyde's sidebar links are generated from any files that have [YAML](http://yaml.org/) front matter blocks, and from there you can change things as much or as little as you want.
 
