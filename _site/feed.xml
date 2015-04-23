@@ -5,8 +5,8 @@
     <description>Person.</description>
     <link>http://dustin.alandz.es//</link>
     <atom:link href="http://dustin.alandz.es//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Apr 2015 07:28:53 +0000</pubDate>
-    <lastBuildDate>Thu, 23 Apr 2015 07:28:53 +0000</lastBuildDate>
+    <pubDate>Thu, 23 Apr 2015 10:10:49 +0000</pubDate>
+    <lastBuildDate>Thu, 23 Apr 2015 10:10:49 +0000</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -16,6 +16,20 @@
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/G4VAdWJXyFk&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;hr&gt;
+
+&lt;p&gt;My setup for this website is actually really nice, much better than my usual way of doing things. The actual website uses &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;, which is an amazing little static site generator. &lt;/p&gt;
+
+&lt;h1&gt;Jekyll &amp;amp; Hyde&lt;/h1&gt;
+
+&lt;p&gt;I came across &lt;a href=&quot;http://alexbilbie.com/&quot;&gt;Alex Bilbie&amp;#39;s&lt;/a&gt; website while I doing an investigation into &lt;a href=&quot;http://alexbilbie.com/2015/04/oauth-open-redirector-attack/&quot;&gt;OAuth&lt;/a&gt; and the look caught my eye. I found out he used &lt;a href=&quot;http://hyde.getpoole.com/&quot;&gt;Hyde&lt;/a&gt;, which is a theme for Jekyll, and decided why not.&lt;/p&gt;
+
+&lt;p&gt;Jekyll is essentially a little &lt;a href=&quot;https://wordpress.org/&quot;&gt;CMS&lt;/a&gt; that can do whatever you want it to. The blog posts are generated from Markdown files in the _posts folder, Hyde&amp;#39;s sidebar links are generated from any files that have &lt;a href=&quot;http://yaml.org/&quot;&gt;YAML&lt;/a&gt; front matter blocks, and from there you can change things as much or as little as you want.&lt;/p&gt;
+
+&lt;p&gt;I changed the theme color to green, changed the font of the title, and now I&amp;#39;m a web designer.&lt;/p&gt;
+
+&lt;h1&gt;Home is where you make it&lt;/h1&gt;
+
+&lt;p&gt;I finally decided to try out &lt;a href=&quot;https://www.vagrantup.com/&quot;&gt;Vagrant&lt;/a&gt; the other day with Laravel Homestead, and it was one of the better choices I&amp;#39;ve made recently. &lt;/p&gt;
 </description>
         <pubDate>Thu, 23 Apr 2015 00:00:00 +0000</pubDate>
         <link>http://dustin.alandz.es//2015/04/23/hello-world/</link>
