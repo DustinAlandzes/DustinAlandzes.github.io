@@ -9,7 +9,7 @@ Hello friends.
 
 -----
 
-My setup for this website is actually really nice, much better than my usual way of doing things. The actual website uses [Jekyll](http://jekyllrb.com/), which is an amazing little static site generator. 
+My setup for this is much better than my usual way of doing things. The actual website uses [Jekyll](http://jekyllrb.com/), which is an amazing little static site generator. 
 
 #Jekyll & Hyde
 
