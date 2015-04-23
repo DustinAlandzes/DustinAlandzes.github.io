@@ -20,5 +20,5 @@ author:
 paginate:         5
 
 # Custom vars
-version:          2.1.0
+resume:           /public/resume.pdf
 github:           http://girhub.com/f00-
