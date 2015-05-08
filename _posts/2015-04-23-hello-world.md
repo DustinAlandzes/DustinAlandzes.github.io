@@ -3,12 +3,6 @@ layout: post
 title: Hello World!
 ---
 
-Hello friends.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/G4VAdWJXyFk" frameborder="0" allowfullscreen></iframe>
-
------
-
 My setup for this is way better than my usual way of doing things. The actual website uses [Jekyll](http://jekyllrb.com/), which is an amazing little static site generator. 
 
 #Maybe Not Being Myself Isn't So Bad
