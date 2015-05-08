@@ -46,4 +46,3 @@ My workflow is so nice now. I edit, or make a post or something, make a commit, 
     git push live master
     [magic]
 
-###And I'm probably doing this all wrong. Oh well.
