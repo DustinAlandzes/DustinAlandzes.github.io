@@ -12,7 +12,9 @@ title: Smash Podcasts - HugS (W.I.P.)
 **[Dr. PeePee](http://smashboards.com/members/dr-peepee.74236/) - "What do you think of a Melee match? Do you see it as a form of Rock-Paper-Scissors, Frame Advantages, or do you try to learn player habits and go off of experience?"**  
 
 I do kind of see it as Rock-Paper-Scissors, but it's obviously more than that. I believe that everything in the game has a counter, and especially with a character like mine, who is limited, you have to be acutely aware of those counters and all of their options.  
+
 When I'm playing, I try to figure out how to counter everything they do, and if I'm ever beaten I say well-- did I lose because I had no choice? Or was it because I didn't know the counter? 100% of the time, I'll think about it, know the counter and apply it next time.   
+
 So that's how I see the game, and pretty much what I do is from building that and understanding what the counters are, I tend to have... I don't want to call it an auto-pilot, but I tend to be able to flow in every match, and not have to reapply everything. It's already kind of embedded in me, and that's how I go about playing my matches.  
 
 **So it sounds like Rock-Paper-Scissors in terms of matchups, each situation within each matchup has a kind of Rock-Paper-Scissors**  
@@ -22,31 +24,41 @@ Once you figure out that Rock beats Scissors, and you know that after your Rock 
 **[N1000](http://smashboards.com/members/n1000.164945/) asks "What are some of your favorite players, currently active and retired. What do you like about their play styles?"**  
 
 Active would be [Mango](http://www.ssbwiki.com/Smasher:mango). Mango is... I mean sometimes I play him, and you know how I told you about that whole counter situation? I play him and I just can't figure out how he counters me. I didn't give him a scenario to counter. It seems like you can't play like that unless you travel in time and know what they're going to do. It's kind of dumb, but that's not to say it's dumb. But yeah, Mango is my favorite active player.  
-I like watching [Lucky](http://www.ssbwiki.com/Smasher:Lucky).   
-As far as old-school players go, I really like [DSF](http://www.ssbwiki.com/Smasher:DSF)'s style, same with [Drephen](http://www.ssbwiki.com/Drephen). I really like awkward/janky kinds of styles that a lot of people aren't playing. It's... It's refreshing, and they work too. I mean a lot of people don't... a lot of people do the whole bread and butter thing. They copy and paste, and it's refreshing to see players do their own unique thing.  
+
+>I like watching [Lucky](http://www.ssbwiki.com/Smasher:Lucky).  
+
+>As far as old-school players go, I really like [DSF](http://www.ssbwiki.com/Smasher:DSF)'s style, same with [Drephen](http://www.ssbwiki.com/Drephen). I really like awkward/janky kinds of styles that a lot of people aren't playing. It's... It's refreshing, and they work too. I mean a lot of people don't... a lot of people do the whole bread and butter thing. They copy and paste, and it's refreshing to see players do their own unique thing.  
+
 So yeah, current would be Mango and Lucky. On the East Coast, I like [Hax](http://www.ssbwiki.com/Hax). I know a lot of people have problems with his attitude, but he's cool, and I do like his style.  
+
 [Jman](http://www.ssbwiki.com/Jman)'s cool, Jman's really campy, really gay. I like that. it's really good.
 
 **What I like about that janky playstyle you were talking about, is they make you figure out their stupid play style, and by the time you figure it out you're already 2 stocks down and then they already know what you're going to do**
 
 **Maybe we should ask you to elucidate on your [Ganon's alleged sickness](https://www.youtube.com/watch?v=XSYW033VYdE)** 
 
-Sick ass ganon dude, sick. Alright, for those of you who don't know, I have hands down the sickest Ganon on the west coast. No competition. It has been the sickest Ganon for longer than my Samus has been good. So sick that it's in critical condition. I'm very proud of my ganon. I think I have more character pride in my Ganon than anyone does in any of their characters. So if you haven't seen my Ganon, [check it out on Youtube](). It's sick
+>Sick ass ganon dude, sick. Alright, for those of you who don't know, I have hands down the sickest Ganon on the west coast. No competition. It has been the sickest Ganon for longer than my Samus has been good. So sick that it's in critical condition. I'm very proud of my ganon. I think I have more character pride in my Ganon than anyone does in any of their characters. So if you haven't seen my Ganon, [check it out on Youtube](https://www.youtube.com/watch?v=XSYW033VYdE). It's sick
 
 **[Jack of Blades](http://smashboards.com/members/jack-of-blades.69685/) asks "What has been the biggest smash related road block? How did you overcome it?"**  
 
-My biggest smash related roadblock has to be... When you become good, after the MLG era I was an established player. What became hardest for me to overcome was the whole ego thing. If someone were to see me, the repercussions would always be in my head while I'm playing. It's hard to thinking about winning when you're only thinking about about not losing. Those are two completely different mindsets. One is the winning mindset and one is the losing mindset. The more you think about not wanting to lose, the more likely you are to lose.  
-That was one of the hardest things to get over. It took me a long time, I just recently got over it. What I learned was to get rid of your ego and just not... It's cliche to say not to worry but, the only way you can really do that is to not have an ego. You have to go in to each match with confidence in yourself.  
+>My biggest smash related roadblock has to be... When you become good, after the MLG era I was an established player. What became hardest for me to overcome was the whole ego thing. If someone were to see me, the repercussions would always be in my head while I'm playing. It's hard to thinking about winning when you're only thinking about about not losing. Those are two completely different mindsets. One is the winning mindset and one is the losing mindset. The more you think about not wanting to lose, the more likely you are to lose.  
+
+>That was one of the hardest things to get over. It took me a long time, I just recently got over it. What I learned was to get rid of your ego and just not... It's cliche to say not to worry but, the only way you can really do that is to not have an ego. You have to go in to each match with confidence in yourself.  
 Confidence relative to yourself, not relative to your opponent.  
-Some people will think 'Oh, you need confidence'. You think "Who am I playing? Jman? Oh I rape Jman, I'm going to beat him". No. That's stupid. What you have to think is "Oh I'm playing Jman? Well I'm playing my absolute best, so fuck it. I'm ready. Let's go" And I guarantee you're more likely to win that way, than thinking any other way. If you're really thinking that someone like Jman, or Hax, or Lucky is a pushover. "Yeah, I'm going to rape them." Then yeah, you're going to get fucked up. You can't think like that. You have to be confident in yourself, you have to get rid of your ego. That's what I learned."
+
+>Some people will think 'Oh, you need confidence'. You think "Who am I playing? Jman? Oh I rape Jman, I'm going to beat him". No. That's stupid. What you have to think is "Oh I'm playing Jman? Well I'm playing my absolute best, so fuck it. I'm ready. Let's go" And I guarantee you're more likely to win that way, than thinking any other way. If you're really thinking that someone like Jman, or Hax, or Lucky is a pushover. "Yeah, I'm going to rape them." Then yeah, you're going to get fucked up. You can't think like that. You have to be confident in yourself, you have to get rid of your ego. That's what I learned."
 
 **??? asked "What made you commit to a character like Samus?"**  
 
-I committed to Samus because I really enjoy [Dragon Ball Z](https://www.youtube.com/watch?v=vewFPWn7-TI). I've said this in an interview before. She was the only one who looked like they had Dragon Ball Z moves. So I started using her, and I wanted to quit, but then I saw Wes winning with her. I thought that well, this is a me problem, not a Samus problem if he's winning with her, so I gotta get better. And that's what I did. I got better than Wes, for sure. There are some people out there who doubt that, but uh... After getting better with her I had a certain pride in maintaining my reputation as the best Samus in the world. That's why I commit to the character. I want to keep her going, and I want to see how far I can go with her.
+>I committed to Samus because I really enjoy [Dragon Ball Z](https://www.youtube.com/watch?v=vewFPWn7-TI). I've said this in an interview before. She was the only one who looked like they had Dragon Ball Z moves. So I started using her, and I wanted to quit, but then I saw Wes winning with her. I thought that well, this is a me problem, not a Samus problem. If he's winning with her, so I gotta get better.
+
+And that's what I did. I got better than Wes, for sure. There are some people out there who doubt that, but uh... After getting better with her I had a certain pride in maintaining my reputation as the best Samus in the world. That's why I commit to the character. I want to keep her going, and I want to see how far I can go with her.
 
 **What kind of balance do you maintain between smash and your daily responsibilities"**
 
-I am a busy motherfucker. I go to school full-time, I work 20 hours a week, currently interning for one of the big four accounting firms. I've got a lot on my plate. And you know, a lot of people quit smash because of "oh, I've got to focus on school". How do I say this... You don't really have to, you can make time for smash. Granted, you'll improve at a slower rate, but if you're already good. Like a lot of those people are, who end up quitting because of school. You don't need to practice ever. You can just show up to tournaments, you can easily make time. I play at one tournament every two weeks, maybe three weeks, and I only practice about four hours total within two weeks. So you know, it doesn't take up that much time. Just play with your friends, have fun. It's an easy balance, it's not that terrible
+>I am a busy motherfucker. I go to school full-time, I work 20 hours a week, currently interning for one of the big four accounting firms. I've got a lot on my plate. And you know, a lot of people quit smash because of "oh, I've got to focus on school". How do I say this... You don't really have to, you can make time for smash. 
+
+>Granted, you'll improve at a slower rate, but if you're already good. Like a lot of those people are, who end up quitting because of school. You don't need to practice ever. You can just show up to tournaments, you can easily make time. I play at one tournament every two weeks, maybe three weeks, and I only practice about four hours total within two weeks. So you know, it doesn't take up that much time. Just play with your friends, have fun. It's an easy balance, it's not that terrible
 
 **How long do you intend to pursue your smash career?**
 
