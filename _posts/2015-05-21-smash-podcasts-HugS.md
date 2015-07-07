@@ -14,7 +14,9 @@ title: Smash Podcasts - HugS (W.I.P.)
 I do kind of see it as Rock-Paper-Scissors, but it's obviously more than that. I believe that everything in the game has a counter, and especially with a character like mine, who is limited, you have to be acutely aware of those counters and all of their options.  
 When I'm playing, I try to figure out how to counter everything they do, and if I'm ever beaten I say well-- did I lose because I had no choice? Or was it because I didn't know the counter? 100% of the time, I'll think about it, know the counter and apply it next time.   
 So that's how I see the game, and pretty much what I do is from building that and understanding what the counters are, I tend to have... I don't want to call it an auto-pilot, but I tend to be able to flow in every match, and not have to reapply everything. It's already kind of embedded in me, and that's how I go about playing my matches.  
+
 **So it sounds like Rock-Paper-Scissors in terms of matchups, each situation within each matchup has a kind of Rock-Paper-Scissors**  
+
 Once you figure out that Rock beats Scissors, and you know that after your Rock beats their Scissors they're going to pull out Paper, and you have to get your Scissors out after that. It's like a sequence of counters that I try to learn. I do try to learn player habits, that's always the most important that I try to do in every single match I play.
 
 **[N1000](http://smashboards.com/members/n1000.164945/) asks "What are some of your favorite players, currently active and retired. What do you like about their play styles?"**  
