@@ -86,13 +86,15 @@ You know how I said the whole counter strategy? There would be times where I wou
 
 There's no shortcut to doing that. You have to have played for awhile. You have to have experience. You have to play a lot, and with a lot of different kinds of players. You have to internalize all this information, either subconsciously or consciously and what you'll do in the middle of a match is your brain will push it back up to the forefront when you play someone you can relate to, who you can understand and handle with some past strategy. I remember once I played ROFL and bombs worked against him, and a year later I'm playing Ka-master in finals and I'm getting raped by Luigi and I started using bombs and I started adapting to what he was doing. It's just bringing back old strategies to the forefront for that particular match. It's not something you can do with a shortcut, you have to play for a long time. You have to be experienced, skilled, and smart to be able to do it. "
 
-**Like being able to analyze in a quick period of time, why did I not win in this little confrontation**   Yeah, you have to be smart. You can't be a dumb ass technical player and be able to do that. You can't, you have to be smart.
+**Like being able to analyze in a quick period of time, why did I not win in this little confrontation**   
+
+Yeah, you have to be smart. You can't be a dumb ass technical player and be able to do that. You can't, you have to be smart.
 
 ##Match Analysis
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SFcf8P5Faco" frameborder="0" allowfullscreen></iframe>
 
-##[Character Specific Questions]
+##Character Specific Questions
 
 **Do you have some general advice on the Falcon matchup, since you claim it's one of your best matchups?**  
 
