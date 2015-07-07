@@ -6,7 +6,7 @@ title: Smash Podcasts - HugS (W.I.P.)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL8LImNJNRATCS-Lsb9drI6_dMamUAimCi" frameborder="0" allowfullscreen></iframe>
 
 ######[This interview](https://youtu.be/Dn6Qx00DSlI?list=PL8LImNJNRATCS-Lsb9drI6_dMamUAimCi) was conducted by [Stabbedbyanipple](http://smashboards.com/members/stabbedbyanipple.138982/) in 2010 as a part of his [Smash Podcasts](http://smashboards.com/threads/smash-podcasts-ask-s2j-questions.269017/) series
----
+
 ##Questions from the Smash Community
 
 **[Dr. PeePee](http://smashboards.com/members/dr-peepee.74236/) - "What do you think of a Melee match? Do you see it as a form of Rock-Paper-Scissors, Frame Advantages, or do you try to learn player habits and go off of experience?"**  
