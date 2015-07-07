@@ -104,10 +104,12 @@ I end up grabing ledge and dropping neutral air, not too high, not too low. So t
 [Twitter](https://twitter.com/hugs86)  
 [Youtube](https://www.youtube.com/channel/UCJ69-_ML00IIGKkQZFsP-uQ)
 
+**Other Interviews**  
+
 [Not So Innocent – MLG Interviews HugS](http://www.majorleaguegaming.com/news/not-so-innocent-mlg-interviews-hugs-2)  
 [Sweet Prologue - Interview with FRQ | HugS](https://www.youtube.com/watch?v=Sy9VgqRXmP4&feature=youtu.be)  
 [Hugs, Chu Dat and Ken Interview - SB Marathon](https://www.youtube.com/watch?v=8j4qsak1v9Q)  
-[Interview with Frequency Gaming's Newest Player, HugS](http://smashboards.com/threads/interview-with-frequency-gamings-newest-player-hugs.360164/)
+[Interview with Frequency Gaming's Newest Player, HugS](http://smashboards.com/threads/interview-with-frequency-gamings-newest-player-hugs.360164/)  
 [Apex 2015 - FRQ | Hugs Interview](https://www.youtube.com/watch?v=9CqtLdhzkHY)  
 
 
