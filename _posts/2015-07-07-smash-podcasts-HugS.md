@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Smash Podcasts - HugS (W.I.P.)
+title: Smash Podcasts - HugS
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL8LImNJNRATCS-Lsb9drI6_dMamUAimCi" frameborder="0" allowfullscreen></iframe>
@@ -50,7 +50,7 @@ Confidence relative to yourself, not relative to your opponent.
 
 **??? asked "What made you commit to a character like Samus?"**  
 
->I committed to Samus because I really enjoy [Dragon Ball Z](https://www.youtube.com/watch?v=vewFPWn7-TI). I've said this in an interview before. She was the only one who looked like they had Dragon Ball Z moves. So I started using her, and I wanted to quit, but then I saw Wes winning with her. I thought that well, this is a me problem, not a Samus problem. If he's winning with her, so I gotta get better.
+>I committed to Samus because I really enjoy [Dragon Ball Z](https://www.youtube.com/watch?v=vewFPWn7-TI). I've said this in an interview before. She was the only one who looked like they had Dragon Ball Z moves. So I started using her, and I wanted to quit, but then I saw [https://www.youtube.com/watch?v=XIAgW5-GvIs](Wes winning with her). I thought that well, this is a me problem, not a Samus problem. If he's winning with her, so I gotta get better.
 
 >And that's what I did. I got better than Wes, for sure. There are some people out there who doubt that, but uh... After getting better with her I had a certain pride in maintaining my reputation as the best Samus in the world. That's why I commit to the character. I want to keep her going, and I want to see how far I can go with her.
 
@@ -74,11 +74,13 @@ Confidence relative to yourself, not relative to your opponent.
 
 **"Favorite Combo Video?"**  
 
-[Hey Hugs](https://www.youtube.com/watch?v=Rjlc1k2qxs0)
+>[Hey Hugs](https://www.youtube.com/watch?v=Rjlc1k2qxs0)
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/Rjlc1k2qxs0" frameborder="0" allowfullscreen></iframe>
 
-**At what point did you consider yourself 'Professional'?**  I considered myself on a pro-level probably mid-MLG 06', after my Anaheim performance. Yeah MLG Anaheim is when I thought I was on that pro-level. 
+**At what point did you consider yourself 'Professional'?**  
+
+>I considered myself on a pro-level probably mid-MLG 06', after my [http://www.majorleaguegaming.com/news/not-so-innocent-mlg-interviews-hugs-2](Anaheim performance). Yeah MLG Anaheim is when I thought I was on that pro-level. 
 
 **What reasons can you think of for the lack of Marth and Shiek players in the current North American meta game, despite their obvious strength**  
 
@@ -100,7 +102,7 @@ No one else is going to counter something the way I will, so if that's my strate
 
 >There's no shortcut to doing that. You have to have played for awhile. You have to have experience. You have to play a lot, and with a lot of different kinds of players. You have to internalize all this information, either subconsciously or consciously and what you'll do in the middle of a match is your brain will push it back up to the forefront when you play someone you can relate to, who you can understand and handle with some past strategy. 
 
->I remember once I played ROFL and bombs worked against him, and a year later I'm playing Ka-master in finals and I'm getting raped by Luigi and I started using bombs and I started adapting to what he was doing. It's just bringing back old strategies to the forefront for that particular match. It's not something you can do with a shortcut, you have to play for a long time. You have to be experienced, skilled, and smart to be able to do it. "
+>I remember once I played [http://www.ssbwiki.com/ROFL](ROFL) and bombs worked against him, and a year later I'm playing [http://www.ssbwiki.com/Smasher:Luigi_Ka-master](Ka-master) in finals and I'm getting raped by Luigi and I started using bombs and I started adapting to what he was doing. It's just bringing back old strategies to the forefront for that particular match. It's not something you can do with a shortcut, you have to play for a long time. You have to be experienced, skilled, and smart to be able to do it. "
 
 **Like being able to analyze in a quick period of time, why did I not win in this little confrontation**   
 
@@ -116,17 +118,19 @@ No one else is going to counter something the way I will, so if that's my strate
 
 >Goal is to stay grounded the whole time.
 
->Falcon is the one who is going to have to approach you. So you're just going to be dash dancing to mess with his spacing. The moment he attacks you're going to shield. What I try to do is, like they do it in Street Fighter, you're going to try to cross over to the other side. Almost every character is vulnerable from behind. So the moment he hits my shield, I wavedash behind, and I start my shield jabbing from behind. You jab and a lot of players will tend to jump out on the second hit. So jab, jab, and then you do a forward tilt, and they'll always jump out into the forward tilt. Better players catch on to that so I stop doing it, but it's something you can mixup. Sometimes I'll stand there and not jab, and jab like a second later, to kind of mess with their timing. 
+>Falcon is the one who is going to have to approach you. So you're just going to be dash dancing to mess with his spacing. The moment he attacks you're going to shield. What I try to do is, like they do it in Street Fighter, you're going to try to cross over to the other side. Almost every character is vulnerable from behind. So the moment he hits my shield,[ ]I wavedash behind, and I start my shield jabbing from behind](https://youtu.be/NL8olR7Y3ec?t=243). You jab and a lot of players will tend to (https://youtu.be/nwadN8UtGf0?t=175)[jump out] on the second hit. So jab, jab, and then you do a forward tilt, and [https://youtu.be/LPWEvqXemIg?t=59](they'll always jump out into the forward tilt). [https://youtu.be/zvyyD6cF6io?t=74](Better players) [https://youtu.be/nwadN8UtGf0?t=308](catch on) [https://www.youtube.com/watch?v=46V4W2ofVr8&feature=youtu.be&t=294](to that) so I stop doing it, but it's something you can mixup. Sometimes I'll stand there and not jab, and jab like a second later, to kind of mess with their timing. 
 
->That's the best it's going to get for you, is to mixup your timing. There's no guaranteed hits against almost anyone. So you're trying to confuse or screw with their timing. As for edgeguarding, what you want to do is stay grounded, until he reaches the end of his up-b and you kind of get a hint of which direction he's going. If he's DI'ing away, I like to do weak fair to strong bair. More damage, and it'll send them flying away, because they're trying to DI the first weak hit.
+>That's the best it's going to get for you, is to mixup your timing. There's no guaranteed hits against almost anyone. So you're trying to confuse or screw with their timing. 
 
->If that doesn't work, I mean you just do it as it goes. Weak back air and if he starts going down you can neutral air or you can spike. If he DI's up and away you can do the sweetspot backair, and you just gotta know if he's coming from below, if he's kind of high you grab the ledge, jump off and neutral air. You want to hit him before he actually reaches the side of the stage, so he has nothing to tech. Edgeguarding is the most important part of the game, because damage comes rarely.
+>As for edgeguarding, what you want to do is stay grounded, until he reaches the end of his up-b and you kind of get a hint of which direction he's going. If he's DI'ing away, I like to do weak fair to strong bair. More damage, and it'll send them flying away, because they're trying to DI the first weak hit.
+
+>If that doesn't work, I mean you just do it as it goes. Weak back air and if he starts going down you can neutral air or you can spike. If he DI's up and away you can do the sweetspot backair, and you just gotta know if he's coming from below, if he's kind of high you [https://youtu.be/zvyyD6cF6io?t=92](grab the ledge, jump off and neutral air). You want to hit him [https://youtu.be/zvyyD6cF6io?t=168](before he actually reaches the side of the stage), so he has nothing to tech. Edgeguarding is the most important part of the game, because damage comes rarely.
 
 >Otherwise your whole game is going to involve shielding his all his attacks and pressuring his shield from behind, and then the moment he makes a mistake, it should end up in an edgeguard situation, which you should execute perfectly every time.
 
->If you see him up-b'ing far in and he's not DI'ing back to the ledge after up-bing, you want to follow him slowly and downsmash him before he touches the ground so he loses his jump. At low percentages he'll be able to jump back up and back air, possibly twice. 
+>If you see him up-b'ing far in and he's not DI'ing back to the ledge after up-bing, you want to follow him slowly and [https://youtu.be/LPWEvqXemIg?t=150](downsmash him) before he touches the ground so he loses his jump. At low percentages he'll be able to jump back up and back air, possibly twice. 
 
->At high percentages, whatever he'll be in the air and DI up, and  he won't die. Sometimes when they up-b to the stage, I like to forward smash because they're DI'ing up and away for the downsmash, so they can pop straight up. Now if you forward smash them while they're DI'ing in that manner, they're going to shoot straight to the opposite direction. "
+>At high percentages, whatever he'll be in the air and DI up, and he won't die. Sometimes when they up-b to the stage, I like to [https://youtu.be/UabiqNUcqKU?t=299](forward smash) because they're DI'ing up and away for the downsmash, so they can pop straight up. Now if you forward smash them while they're DI'ing in that manner, they're going to shoot straight to the opposite direction. "
 
 **What do you do when they're up-bing to the ledge from under the stage?**  
 
