@@ -1,5 +1,9 @@
 # dustinalandzes.github.io
 
+## Description
+
+My personal website.
+
 ## Resources
 https://pages.github.com/
 
