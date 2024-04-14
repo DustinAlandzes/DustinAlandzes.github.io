@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import * as THREE from 'three'
 import React, {useRef} from "react";
 import { Canvas, useFrame, ThreeElements } from '@react-three/fiber';
+import Macbook from "./Macbook";
 
 function Box(props: ThreeElements['mesh']) {
   const meshRef = useRef<THREE.Mesh>(null);
@@ -32,6 +33,7 @@ export default function Home() {
             <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
             <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />
             <Box position={[0, 0, 0]} />
+            <Macbook   />
           </Canvas>
         </div>
       </div>
