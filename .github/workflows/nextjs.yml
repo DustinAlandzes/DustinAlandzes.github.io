@@ -34,6 +34,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - run: cd  ${{ inputs.working_directory }}
       - name: Detect package manager
         id: detect-package-manager
         run: |
