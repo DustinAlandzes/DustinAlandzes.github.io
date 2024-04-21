@@ -15,10 +15,14 @@ https://nextjs.org/docs/app/building-your-application/testing/jest
 
 https://jestjs.io/docs/getting-started
 
-
 https://threejs.org/
 
 https://docs.pmnd.rs/react-three-fiber/getting-started/introduction
+
+https://tailwindcss.com/
+
+https://ui.shadcn.com/
+
 
 ## Models
 
