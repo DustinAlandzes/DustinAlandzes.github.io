@@ -23,6 +23,8 @@ https://tailwindcss.com/
 
 https://ui.shadcn.com/
 
+https://simpleicons.org/
+
 
 ## Models
 

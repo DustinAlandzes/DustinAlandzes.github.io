@@ -115,24 +115,6 @@ export default function Model(props: JSX.IntrinsicElements['group']) {
                     <mesh geometry={nodes.Circle009_1.geometry} material={nodes.Circle009_1.material}/>
                 </group>
             </group>
-            <rectAreaLight
-                width={2.5}
-                height={1.65}
-                intensity={10}
-                color={'#ffffff'}
-                rotation={[-0.1, Math.PI, 0]}
-                position={[0, 0.55, -1.15]}
-            />
-            <Html
-                transform
-                wrapperClass="htmlScreen"
-                distanceFactor={1.17}
-                position={[0, 1.56, -1.4]}
-                rotation-x={-0.256}
-            >
-                <iframe src="resume.pdf"/>
-            </Html>
-
         </group>
     )
 }
