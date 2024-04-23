@@ -40,7 +40,7 @@ export default function Home() {
                     <div className={"flex justify-around"}>
                         <a href={"https://drchrono.com/"}><Image src={"drchrono.png"} width={200} height={100}/></a>
                         <a href={"https://www.legalist.com/"}><Image src={"legalist.svg"} width={200} height={100}/></a>
-                        <a href={"https://www.2u.com/"}><Image src={"2U.png"} width={200} height={100}/></a>
+                        <a href={"https://www.2u.com/"}><Image src={"2U.png"} width={100} height={100}/></a>
                     </div>
             </div>
             <div className="max-w-full z-20 mt-auto">
