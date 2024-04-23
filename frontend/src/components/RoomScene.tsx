@@ -1,16 +1,23 @@
 'use client';
 
 import {Canvas} from "@react-three/fiber";
-import {CameraControls, Environment, Image, PerspectiveCamera, PresentationControls, Stage} from "@react-three/drei";
+import {Environment, Image, Stage} from "@react-three/drei";
 import Room from "@/components/Room";
 import Desk from "@/components/Desk";
 import Macbook from "@/components/Macbook";
-import React from "react";
+import React, {useEffect, useState} from "react";
+import GamecubeController from "@/components/GamecubeController"
 
 export default function RoomScene() {
+
+    const [hovering, setHovering] = useState(false)
+    useEffect(() => {
+        document.body.style.cursor = hovering ? 'pointer' : 'auto'
+    }, [hovering])
+
     return (
         <div style={{width: "100%", height: "100%"}}>
-            <Canvas camera={{position: [0,0,0]}}>
+            <Canvas camera={{position: [0, 0, 0]}}>
                 <Stage>
                     <color args={['#241a1a']} attach="background"/>
                     <Environment
@@ -26,13 +33,25 @@ export default function RoomScene() {
                         scene={undefined} // adds the ability to pass a custom THREE.Scene, can also be a ref
                         encoding={undefined} // adds the ability to pass a custom THREE.TextureEncoding (default: THREE.sRGBEncoding for an array of files and THREE.LinearEncoding for a single texture)
                     />
-                    <PresentationControls>
                     <Room/>
                     <Desk scale={0.7} position={[0, -2.2, -3]} rotation={[0, Math.PI / 2, 0]}/>
                     <Macbook scale={0.5} position={[1, -0.90, -3]}/>
-                    <Image url="/bomb_painting.png" scale={2} position={[-3.85, 0.80, 1.5]}
-                           rotation={[0, Math.PI / 2, 0]}/>
-                        </PresentationControls>
+                    <Image url="/bomb_painting.png"
+                           scale={2}
+                           position={[-3.85, 0.80, 1.5]}
+                           rotation={[0, Math.PI / 2, 0]}
+                           onClick={() => window.open("https://dustinalandzes.github.io/super-mario-64-star-select/")}
+                           onPointerOver={() => setHovering(true)}
+                           onPointerOut={() => setHovering(false)}
+                    />
+                    <GamecubeController
+                        position={[-2, -0.5, -3]}
+                        rotation={[-Math.PI / 2, 0, 0]}
+                        scale={0.01}
+                        onClick={() => window.open("https://dustinalandzes.github.io/react-three-fiber-ssbm/")}
+                        onPointerOver={() => setHovering(true)}
+                        onPointerOut={() => setHovering(false)}
+                    />
                 </Stage>
             </Canvas>
         </div>
