@@ -22,8 +22,8 @@ export default function Home() {
     return (
         <>
         <div
-            className="container relative h-full flex-col items-center justify-center md:grid lg:max-w-full lg:grid-cols-2 lg:px-0">
-            <div className="relative h-full v-full flex-col bg-muted p-10 text-white flex dark:border-r">
+            className="container h-full flex-col items-center justify-center md:grid lg:max-w-full lg:grid-cols-2 lg:px-0">
+            <div className="h-full v-full flex-col bg-muted p-10 text-white flex dark:border-r">
                 <div className="absolute inset-0 bg-cyan-900"/>
                 <div className="relative flex items-center text-lg font-medium">
                     Dustin Alandzes
@@ -43,7 +43,7 @@ export default function Home() {
                         <a href={"https://www.2u.com/"}><Image src={"2U.png"} width={200} height={100}/></a>
                     </div>
             </div>
-            <div className="relative z-20 mt-auto">
+            <div className="max-w-full z-20 mt-auto">
                 <blockquote className="space-y-2">
                     <p className="text-lg">
                         &ldquo;Beware of finding what you&apos;re looking for.&rdquo;
