@@ -22,7 +22,7 @@ export default function Home() {
     return (
         <>
         <div
-            className="container h-full flex-col items-center justify-center md:grid lg:max-w-full lg:grid-cols-2 lg:px-0">
+            className="container px-0 h-full flex-col items-center justify-center md:grid lg:max-w-full lg:grid-cols-2 lg:px-0">
             <div className="h-full v-full flex-col bg-muted p-10 text-white flex dark:border-r">
                 <div className="absolute inset-0 bg-cyan-900"/>
                 <div className="relative flex items-center text-lg font-medium">
@@ -35,14 +35,14 @@ export default function Home() {
                     <a href={"https://linkedin.com/in/dustinalandzes"} target={"_blank"}><LinkedInIcon
                         style={{width: "30px"}} fill={"white"}/></a>
                 </div>
-                <div className="relative z-20 mt-auto">
+                <div className="h-full z-20 mt-32">
                     <div className={"text-4xl font-bold text-center mb-4"}>Work Experience</div>
                     <div className={"flex justify-around"}>
                         <a href={"https://drchrono.com/"}><Image alt={"DrChrono logo"} src={"drchrono.png"} width={200} height={100}/></a>
                         <a href={"https://www.legalist.com/"}><Image alt={"Legalist logo"} src={"legalist.svg"} width={200} height={100}/></a>
                         <a href={"https://www.2u.com/"}><Image alt={"2U logo"} src={"2U.png"} width={100} height={100}/></a>
                     </div>
-            </div>
+                </div>
             <div className="max-w-full z-20 mt-auto">
                 <blockquote className="space-y-2">
                     <p className="text-lg">
