@@ -43,14 +43,6 @@ export default function Home() {
                         <a href={"https://www.2u.com/"}><Image alt={"2U logo"} src={"2U.png"} width={100} height={100}/></a>
                     </div>
                 </div>
-            <div className="max-w-full z-20 mt-auto">
-                <blockquote className="space-y-2">
-                    <p className="text-lg">
-                        &ldquo;Beware of finding what you&apos;re looking for.&rdquo;
-                    </p>
-                    <footer className="text-sm">Richard Hamming</footer>
-                </blockquote>
-            </div>
         </div>
         <div className="h-full">
             <RoomScene/>
