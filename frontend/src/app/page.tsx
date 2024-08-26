@@ -1,53 +1,312 @@
 'use client';
+import {SubmitHandler, useForm } from "react-hook-form";
 
-import Image from 'next/image'
-import RoomScene from "@/components/RoomScene";
-import {SVGProps} from "react";
+import Image from 'next/image';
+import GithubLogo from "./github-mark.png";
+import LinkedInLogo from "./In-Blue-128@2x.png";
+import {Certification, Job, Project, certifications, Jobs, projects} from "@/app/data";
+import React, {useEffect, useState} from "react";
+import ThreeComponent from "@/app/three-component";
+import {Dongle, Secular_One, Vollkorn} from "next/font/google";
+import { useTrail, a } from '@react-spring/web'
+import styles from './globals.css'
 
-function GithubIcon(props: SVGProps<any>) {
-    return <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}><title>GitHub</title>
-        <path
-            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-    </svg>
+const vollkorn = Vollkorn({ subsets: ["latin"], weight: ['400'] });
+const secularOne = Secular_One({ subsets: ["latin"], weight: ['400'] });
+const dongle = Dongle({ subsets: ["latin"], weight: ['400'] });
+
+// Global state?
+
+function DarkModeToggle({darkMode, setDarkMode}: {darkMode: boolean, setDarkMode: any}): JSX.Element {
+    return <>
+        <select onChange={(event) => setDarkMode(event.target.value === "dark")} defaultValue={"light"}>
+            <option value="light">Light mode</option>
+            <option value="dark">Dark mode</option>
+        </select>
+    </>;
 }
 
-function LinkedInIcon(props: SVGProps<any>) {
-    return <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}><title>LinkedIn</title>
-        <path
-            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-    </svg>
+const Trail: React.FC<{ open: boolean, children: any }> = ({ open, children }) => {
+  const items = React.Children.toArray(children)
+  const trail = useTrail(items.length, {
+    config: { mass: 5, tension: 2000, friction: 200 },
+    opacity: open ? 1 : 0,
+    x: open ? 0 : 0,
+    height: open ? 110 : 0,
+    from: { opacity: 0, x: 0, height: 0 },
+  })
+  return (
+    <div>
+      {trail.map(({ height, ...style }, index) => (
+        <a.div key={index} style={style}>
+          <a.div style={{ height }}>{items[index]}</a.div>
+        </a.div>
+      ))}
+    </div>
+  )
 }
 
-export default function Home() {
+function Header({darkMode, setDarkMode}: {darkMode: boolean, setDarkMode: any}): JSX.Element {
+
+    const [open, setOpen] = useState(false)
+
+    useEffect(() => {
+        setOpen(true)
+    })
+
+    return <header id={"header"}>
+        <div className={styles.container}>
+            <Trail open={open}>
+                <a.div id={"name"} className={vollkorn.className}>{"Dustin Alandzes"}</a.div>
+            </Trail>
+        </div>
+        <div id={"social-media"}>
+        <a href={"https://linkedin.com/in/dustinalandzes"} target={"_blank"} id={"linkedin-icon"}>
+                <Image src={LinkedInLogo} alt={"LinkedIn"} width={100}/>
+            </a>
+            <a href={"https://github.com/DustinAlandzes"} target={"_blank"} id={"github-icon"}>
+                <Image src={GithubLogo} alt={"GitHub"} height={100}/>
+            </a>
+        </div>
+        <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode}/>
+    </header>
+}
+
+function CertificationItem({certification, detailed}: {
+    certification: Certification,
+    detailed?: boolean
+}): JSX.Element {
+    return <div className={"certification-item"}
+                style={{
+                    filter: certification.expireDate < new Date() ? 'grayscale(100%)' : ''
+        }}>
+        {detailed && `${certification.name}- ${certification.description}`}
+        <a href={certification.url.toString()} target={"_blank"}>
+            <img src={certification.image.src} alt={`${certification.name} Badge`} width="340" height="340" />
+        </a>
+    </div>
+}
+
+
+export function CertificationsSection({certifications, detailed}: {certifications: Certification[], detailed?: boolean}) {
+    return <section className={"section"} id={"certifications"}>
+        <h1 className={"section-title"}>
+            <a href={"#certifications"}>Certifications</a>
+        </h1>
+        <div className={"section-body"}>
+            <div id={"certification-list"}>
+                {certifications.map((certification, index) => <CertificationItem key={index}
+                                                                                 certification={certification}
+                                                                                 detailed={detailed}/>)}
+            </div>
+        </div>
+    </section>
+}
+
+function JobItem({
+    job
+}: {
+    job: Job}): JSX.Element {
+    return <div style={{
+        marginBottom: "10vh"
+    }}>
+        <h1 style={{
+            fontSize: "32px"
+        }}>
+            {job.url ?
+                <a className={"job-company-name"} href={job.url.toString()}>{job.company}</a>
+                :
+                <span className={"job-company-name"}>{job.company}</span>
+            }
+        </h1>
+        <h2>{job.position}</h2>
+        <div>
+            <time dateTime={job.startDate.toISOString()}>
+                {job.startDate.toLocaleDateString("en-US", {month: "long", year: "numeric"})}
+            </time>
+            {" - "}
+            <time dateTime={job.endDate.toISOString()}>
+                {job.endDate.toLocaleDateString("en-US", {month: "long", year: "numeric"})}
+            </time>
+        </div>
+        <p>{job.description}</p>
+        {job.image && <img src={job.image.src} alt={`${job.company} logo`} width="340" height="340"/>}
+    </div>
+}
+
+export function JobsSection({jobs}: {jobs: Job[]}) {
+    const startDates = jobs.toSorted((a, b) => a.startDate.getFullYear() - b.startDate.getFullYear())
+    const first_job: Job = startDates[0]
+    const last_job: Job = startDates[startDates.length - 1]
+    const years_of_experience = last_job.endDate.getFullYear() - first_job.startDate.getFullYear()
+
+    return <section className={"section"} id={"jobs"}>
+        <h1 className={"section-title"}>
+            <a href={"#jobs"}>
+                {`Work Experience`}
+            </a>
+            <span id={"years-of-experience"}>
+                {`${years_of_experience} years`}
+            </span>
+        </h1>
+        <div className={"section-body"}>
+            <div id={"jobs-list"}>
+                {Jobs.map((job, index) => <JobItem key={index} job={job}/>)}
+            </div>
+        </div>
+    </section>
+}
+
+function ProjectItem({
+    project}: {project: Project}): JSX.Element {
+    return <div className={"project"}>
+        <div className={"project-name"}>
+            <a href={project.url.toString()}>{project.name}</a>
+        </div>
+        <div className={"project-description"}>
+            {project.description}
+        </div>
+        {project.image}
+    </div>
+}
+
+export function ProjectsSection({projects}: {projects: Project[]}): JSX.Element {
+    return <section className={"section"} id={"projects"}>
+        <h1 className={"section-title"}>
+            <a href={"#projects"}>Projects</a>
+        </h1>
+        <div className={"section-body"}>
+            <div id={"project-list"}>
+                {projects.map((project, index) => <ProjectItem key={index} project={project}/>)}
+            </div>
+        </div>
+    </section>
+}
+
+export function ContactSection(): JSX.Element {
+    type FormValues = {
+        name: string,
+        email: string,
+        body: string,
+    }
+
+    const [sent, setSent] = useState(false);
+    const { register, handleSubmit, formState: { errors }, setError } = useForm<FormValues>({
+        criteriaMode: 'all'
+    });
+
+    const onSubmit: SubmitHandler<FormValues> = async data => {
+        console.log(data);
+        // TODO: Captcha verification
+        const CONTACT_FORM_API = "https://httpbin.com/post"
+        try {
+            const response = await fetch(CONTACT_FORM_API, {
+                method: "POST",
+                body: JSON.stringify(data)
+            })
+            const data = await response.json()
+        } catch (error: any) {
+            setError('root.serverError', {
+              type: error.statusCode,
+            })
+            setSent(false)
+        }
+        setSent(true);
+    }
+
+    if (sent) {
+         return <section className={"section"} id={"contact"}>
+            <h1 className={"section-title"}>
+                <a href={"#contact"}>{"Get in Touch"}</a>
+            </h1>
+             <div className={"section-body"}>
+                <div id={"contact-email"}>
+                    {"You can email me at "}<a href={"mailto:fezf00@gmail.com"} style={{color: "blue"}}>{"fezf00@gmail.com"}</a>{"."}
+                </div>
+                <strong id={"thanks-for-contacting-message"}>
+                    <div>{"Thanks for your interest!"}</div>
+                    <div>{"I'll get back to you as soon as possible."}</div>
+                </strong>
+            </div>
+        </section>
+    } else {
+         return <section className={"section"} id={"contact"}>
+             <h1 className={"section-title"}>
+                 <a href={"#contact"}>Get in Touch</a>
+             </h1>
+             <div className={"section-body"}>
+                 <div id={"contact-email"}>
+                     {"You can email me at "}<a href={"mailto:fezf00@gmail.com"} style={{color: "blue"}}>{"fezf00@gmail.com"}</a>{" or submit the form below."}
+                 </div>
+                 <form onSubmit={handleSubmit(onSubmit)} id={"contact-form"}>
+
+                     <div className={"form-group"}>
+                         <label htmlFor={"contact-form-input-name"}>Name</label>
+                         <input {...register("name", {required: "Name is required"})}
+                                placeholder={"Name"}
+                                aria-invalid={errors.name ? "true" : "false"}
+                                id={"contact-form-input-name"}
+                         />
+                         {errors.name && <span role={"alert"}>{errors.name.message}</span>}
+                     </div>
+
+                     <div className={"form-group"}>
+                         <label htmlFor={"contact-form-input-email"}>Email</label>
+                         <input {...register("email", {required: "Email Address is required"})}
+                                type="email"
+                                placeholder={"example@domain.tld"}
+                                aria-invalid={errors.email ? "true" : "false"}
+                                id={"contact-form-input-email"}
+                         />
+                         {errors.email && <span role="alert">{errors.email.message}</span>}
+                     </div>
+
+                     <div className={"form-group"}>
+                         <label htmlFor={"contact-form-input-body"}>Message</label>
+                         <textarea {...register("body", {required: false})}
+                                   placeholder={"Hello! My name is ..."}
+                                   rows={5}
+                                   id="contact-form-input-body"/>
+                     </div>
+                     {errors?.root?.serverError.type === 400 && <p>server response message</p>}
+
+                     <div className={"form-group"}>
+                         <input type={"submit"} id={"submit-contact-button"}/>
+                     </div>
+
+                 </form>
+             </div>
+         </section>
+    }
+}
+
+function Footer() {
+        return <footer id={"footer"}>
+        <address>
+            <a href={"https://linkedin.com/in/dustinalandzes"} target={"_blank"}>
+                {"https://linkedin.com/in/dustinalandzes"}
+            </a>
+        </address>
+        <span id={"back-to-the-top-link"} onClick={() => {
+            window.scrollTo(0, 0)
+        }}>back to the top</span>
+    </footer>;
+}
+
+export default function Home(): JSX.Element {
+    const [darkMode, setDarkMode] = useState((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? true : false);
+
     return (
-        <>
-        <div
-            className="container px-0 h-full flex-col items-center justify-center md:grid lg:max-w-full lg:grid-cols-2 lg:px-0">
-            <div className="h-full v-full flex-col bg-muted p-10 text-white flex dark:border-r">
-                <div className="absolute inset-0 bg-cyan-900"/>
-                <div className="relative flex items-center text-lg font-medium">
-                    Dustin Alandzes
-                </div>
-                <div className={"relative flex items-center text-lg font-medium"}>
-                    <a href={"https://github.com/DustinAlandzes"} target={"_blank"}>
-                        <GithubIcon style={{width: "30px", marginRight: "5px"}} fill={"white"}/>
-                    </a>
-                    <a href={"https://linkedin.com/in/dustinalandzes"} target={"_blank"}><LinkedInIcon
-                        style={{width: "30px"}} fill={"white"}/></a>
-                </div>
-                <div className="h-full z-20 mt-32">
-                    <div className={"text-4xl font-bold text-center mb-4"}>Work Experience</div>
-                    <div className={"flex justify-around"}>
-                        <a href={"https://drchrono.com/"}><Image alt={"DrChrono logo"} src={"drchrono.png"} width={200} height={100}/></a>
-                        <a href={"https://www.legalist.com/"}><Image alt={"Legalist logo"} src={"legalist.svg"} width={200} height={100}/></a>
-                        <a href={"https://www.2u.com/"}><Image alt={"2U logo"} src={"2U.png"} width={100} height={100}/></a>
-                    </div>
-                </div>
+        <div className={darkMode ? "dark" : "light"}>
+            <Header darkMode={darkMode} setDarkMode={setDarkMode}/>
+            <main className={dongle.className}>
+                {/*<ThreeComponent/>*/}
+                <CertificationsSection certifications={certifications}/>
+                <JobsSection jobs={Jobs}/>
+                <ProjectsSection projects={projects} />
+                <ContactSection/>
+            </main>
+            <Footer />
         </div>
-        <div className="h-full">
-            <RoomScene/>
-        </div>
-        </div>
-</>
-)
+    )
 }
