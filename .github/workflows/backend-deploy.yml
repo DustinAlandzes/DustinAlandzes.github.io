@@ -1,7 +1,7 @@
 name: Deploy on server
 on:
   workflow_run:
-    workflows: [ backend-deploy ]
+    workflows: [ backend-test-and-lint ]
     branches:
       - master
     types:
