@@ -15,8 +15,6 @@ defaults:
 jobs:
   deploy:
     name: Deploy
-    environment:
-      name: github-pages
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
@@ -30,6 +28,7 @@ jobs:
           aws-region: ${{ vars.AWS_REGION }}
       - name: Install Dependencies
         run: 'pip install -r requirements.txt -t ./package  --platform manylinux2014_x86_64 --only-binary=:all:'
+      - run: echo '${{ toJSON(github) }}'
       - name: Archive the lambda function code and dependencies
         run: cp main.py package/main.py && zip -r deployment_package.zip package
       - name: Push code to lambda
