@@ -3,7 +3,7 @@ on:
   workflow_run:
     workflows: [ backend-deploy ]
     branches:
-      - main
+      - master
     types:
       - completed
 jobs:
