@@ -6,18 +6,20 @@ on:
       - master
     types:
       - completed
+
+
+defaults:
+  run:
+    working-directory: ./backend/contact_form_lambda
+
 jobs:
   deploy:
     name: Deploy
     environment:
       name: github-pages
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: backend/contact_form_lambda
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - run: echo 'The triggering workflow passed'
       - name: Checkout
         uses: actions/checkout@v4
       - name: Configure AWS credentials
