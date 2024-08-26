@@ -17,10 +17,9 @@ export default function ContactSection(): JSX.Element {
     const onSubmit: SubmitHandler<FormValues> = async data => {
         console.log(data);
         // TODO: Captcha verification
-        // process.env.CONTACT_FORM_ENDPOINT
-        const CONTACT_FORM_API = "https://httpbin.com/post"
+        const CONTACT_FORM_ENDPOINT = "https://lp2rry5bz9.execute-api.us-east-1.amazonaws.com/"
         try {
-            const response: Response = await fetch(CONTACT_FORM_API, {
+            const response: Response = await fetch(CONTACT_FORM_ENDPOINT, {
                 method: "POST",
                 body: JSON.stringify(data)
             })
