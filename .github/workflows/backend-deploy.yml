@@ -2,7 +2,8 @@ name: Deploy on server
 on:
   workflow_run:
     workflows: [ backend-deploy ]
-    branches: [ main ]
+    branches:
+      - main
     types:
       - completed
 jobs:
@@ -24,6 +25,6 @@ jobs:
       - name: Install Dependencies
         run: pip install -r requirements.txt -t ./package  --platform manylinux2014_x86_64 --only-binary=:all
       - name: Archive the lambda function code and dependencies
-        run: zip -r ../deployment_package.zip package
+        run: cp main.py package/main.py && zip -r ../deployment_package.zip package
       - name: Push code to lambda
         run: aws lambda update-function-code --function-name ${{ env.AWS_LAMBDA_FUNCTION_ARN }} --zip-file fileb://deployment_package.zip

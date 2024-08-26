@@ -45,6 +45,7 @@ export default function RoomScene() {
                     {/*<Blinds scale={0.01} position={[-0.5, 0, 0.4]}/>*/}
                     <Desk scale={0.7} position={[0, -2.2, -3]} rotation={[0, Math.PI / 2, 0]}/>
                     <Macbook scale={0.5} position={[1, -0.90, -3]}/>
+                    {/* eslint-disable-next-line jsx-a11y/alt-text */}
                     <Image url="/bomb_painting.png"
                            scale={2}
                            position={[-3.85, 0.80, 1.5]}

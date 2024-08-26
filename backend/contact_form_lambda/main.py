@@ -16,12 +16,6 @@ class ContactFormSubmission(BaseModel):
     body: str
 
 
-class Event(TypedDict):
-    name: str
-    email: str
-    body: str
-
-
 class Response(TypedDict):
     statusCode: int
     success: bool
