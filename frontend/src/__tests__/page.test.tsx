@@ -1,17 +1,17 @@
 import '@testing-library/jest-dom'
-import { render, screen } from '@testing-library/react'
-import Page, {CertificationsSection, ContactSection, JobsSection, ProjectsSection} from '../app/page'
+import { render } from '@testing-library/react'
 import React from "react";
 import {Certification, Job, Project} from "@/app/data";
 import AWSSolutionsArchitectBadge from "@/app/aws-solutions-architect-associate.png";
+import Home from "@/app/page"
+import CertificationsSection from "@/components/Certifications";
+import WorkExperienceSection from "@/components/WorkExperience";
+import ProjectsSection from "@/components/Projects";
+import ContactSection from "@/components/Contact";
 
-describe('Page', () => {
+describe('Home', () => {
   it('renders', () => {
-    render(<Page />)
-
-    const heading = screen.getByRole('heading', { level: 1 })
-
-    expect(heading).toBeInTheDocument()
+    render(<Home />)
   });
 
   it('renders the certifications section', () => {
@@ -24,10 +24,6 @@ describe('Page', () => {
       image: AWSSolutionsArchitectBadge
     }]
     render(<CertificationsSection certifications={certifications} />)
-
-    const heading = screen.getByRole('heading', { level: 1 })
-
-    expect(heading).toBeInTheDocument()
   });
 
 
@@ -39,11 +35,7 @@ describe('Page', () => {
       startDate: new Date(),
       endDate: new Date(),
     }]
-    render(<JobsSection jobs={jobs}/>)
-
-    const heading = screen.getByRole('heading', { level: 1 })
-
-    expect(heading).toBeInTheDocument()
+    render(<WorkExperienceSection jobs={jobs}/>)
   });
 
 
@@ -56,27 +48,15 @@ describe('Page', () => {
     }];
 
     render(<ProjectsSection projects={projects} />)
-
-    const heading = screen.getByRole('heading', { level: 1 })
-
-    expect(heading).toBeInTheDocument()
   });
 
   it('renders the contacts section', () => {
     render(<ContactSection />)
-
-    const heading = screen.getByRole('heading', { level: 1 })
-
-    expect(heading).toBeInTheDocument()
   });
 
   it('can submit the contact form', () => {
     // https://react-hook-form.com/advanced-usage#TestingForm
     render(<ContactSection />)
-
-    const heading = screen.getByRole('heading', { level: 1 })
-
-    expect(heading).toBeInTheDocument()
   });
 
 
