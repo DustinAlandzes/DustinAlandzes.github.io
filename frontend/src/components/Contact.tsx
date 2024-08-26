@@ -15,10 +15,9 @@ export default function ContactSection(): JSX.Element {
     });
 
     const onSubmit: SubmitHandler<FormValues> = async data => {
-        console.log(data);
-        // TODO: Captcha verification
-        const CONTACT_FORM_ENDPOINT = "https://lp2rry5bz9.execute-api.us-east-1.amazonaws.com/"
         try {
+            // @ts-ignore
+            const CONTACT_FORM_ENDPOINT: string = process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT
             const response: Response = await fetch(CONTACT_FORM_ENDPOINT, {
                 method: "POST",
                 body: JSON.stringify(data)
@@ -43,8 +42,7 @@ export default function ContactSection(): JSX.Element {
                     {"You can email me at "}<a href={"mailto:fezf00@gmail.com"} style={{color: "blue"}}>{"fezf00@gmail.com"}</a>{"."}
                 </div>
                 <strong id={"thanks-for-contacting-message"}>
-                    <div>{"Thanks for your interest!"}</div>
-                    <div>{"I'll get back to you as soon as possible."}</div>
+                    <div>{"Thanks! I'll get back to you as soon as possible."}</div>
                 </strong>
             </div>
         </section>
