@@ -1,4 +1,4 @@
-name: Frontend build, lint and test
+name: FrontendTest
 
 on:
   push:
