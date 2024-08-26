@@ -1,7 +1,7 @@
-name: Deploy on server
+name: Deploy backend to Lambda
 on:
   workflow_run:
-    workflows: [ backend-test-and-lint ]
+    workflows: [ "Python testing and linting" ]
     branches:
       - master
     types:
