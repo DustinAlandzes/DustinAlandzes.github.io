@@ -28,6 +28,10 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ vars.AWS_REGION }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
       - name: Install Dependencies
         run: 'pip install -r requirements.txt -t ./package  --platform manylinux2014_x86_64 --only-binary=:all:'
       - name: Archive the lambda function code and dependencies
