@@ -44,7 +44,6 @@ describe('Home', () => {
       name: "",
       description: "",
       url: new URL("https://google.com"),
-      image: null
     }];
 
     render(<ProjectsSection projects={projects} />)
