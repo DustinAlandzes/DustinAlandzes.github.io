@@ -7,7 +7,6 @@ import Desk from "@/components/Desk";
 import Macbook from "@/components/Macbook";
 import React, {useEffect, useState} from "react";
 import GamecubeController from "@/components/GamecubeController"
-import Blinds from "@/components/Blinds"
 
 export default function RoomScene() {
 
