@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Open_Sans, Marmelad, Vollkorn, JetBrains_Mono } from "next/font/google";
+import {Secular_One} from "next/font/google";
 import "./globals.css";
 
-const vollkorn = Vollkorn({ subsets: ["latin"], weight: ['400'] });
-const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"], weight: ['400'] });
+const secularOne = Secular_One({ subsets: ["latin"], weight: ['400'] });
 
 export const metadata: Metadata = {
   title: "Dustin Alandzes",
@@ -19,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={jetBrainsMono.className}>{children}</body>
+      <body className={secularOne.className}>{children}</body>
     </html>
   );
 }

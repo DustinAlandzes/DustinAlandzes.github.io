@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import {SubmitHandler, useForm} from "react-hook-form";
-import {a} from "@react-spring/web";
 
 export default function ContactSection(): JSX.Element {
     type FormValues = {
@@ -34,7 +33,7 @@ export default function ContactSection(): JSX.Element {
     }
 
     if (sent) {
-         return <section className={"section"} id={"contact"}>
+         return <section id={"contact"}>
             <h1 className={"section-title"}>
                 <a href={"#contact"}>{"Get in Touch"}</a>
             </h1>
@@ -49,7 +48,7 @@ export default function ContactSection(): JSX.Element {
             </div>
         </section>
     } else {
-         return <section className={"section"} id={"contact"}>
+         return <section id={"contact"}>
              <h1 className={"section-title"}>
                  <a href={"#contact"}>Get in Touch</a>
              </h1>

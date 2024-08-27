@@ -7,7 +7,6 @@ import Desk from "@/components/Desk";
 import Macbook from "@/components/Macbook";
 import React, {useEffect, useState} from "react";
 import GamecubeController from "@/components/GamecubeController"
-import Blinds from "@/components/Blinds"
 
 export default function RoomScene() {
 
@@ -42,7 +41,6 @@ export default function RoomScene() {
                     {/*<ScrollControls pages={3} damping={0.1}>*/}
                     {/*</ScrollControls>*/}
                     <Room/>
-                    {/*<Blinds scale={0.01} position={[-0.5, 0, 0.4]}/>*/}
                     <Desk scale={0.7} position={[0, -2.2, -3]} rotation={[0, Math.PI / 2, 0]}/>
                     <Macbook scale={0.5} position={[1, -0.90, -3]}/>
                     {/* eslint-disable-next-line jsx-a11y/alt-text */}

@@ -2,7 +2,7 @@ import '@testing-library/jest-dom'
 import { render } from '@testing-library/react'
 import React from "react";
 import {Certification, Job, Project} from "@/app/data";
-import AWSSolutionsArchitectBadge from "@/app/aws-solutions-architect-associate.png";
+import AWSSolutionsArchitectBadge from "../../public/aws-solutions-architect-associate.png";
 import Home from "@/app/page"
 import CertificationsSection from "@/components/Certifications";
 import WorkExperienceSection from "@/components/WorkExperience";

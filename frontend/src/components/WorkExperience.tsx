@@ -1,25 +1,17 @@
-import {Job, Jobs} from "@/app/data";
-import {a} from "@react-spring/web";
-import Image from "next/image";
 import React from "react";
+import {Job} from "@/app/data";
 
-function JobItem({
-    job
-}: {
-    job: Job}): JSX.Element {
-    return <div style={{
-        marginBottom: "10vh"
-    }}>
-        <h1 style={{
-            fontSize: "32px"
-        }}>
+
+function JobItem({job}: {job: Job}): JSX.Element {
+    return <div>
+        <h1>
             {job.url ?
                 <a className={"job-company-name"} href={job.url.toString()}>{job.company}</a>
                 :
                 <span className={"job-company-name"}>{job.company}</span>
             }
         </h1>
-        <h2>{job.position}</h2>
+        {job.position}
         <div>
             <time dateTime={job.startDate.toISOString()}>
                 {job.startDate.toLocaleDateString("en-US", {month: "long", year: "numeric"})}
@@ -30,7 +22,7 @@ function JobItem({
             </time>
         </div>
         <p>{job.description}</p>
-        {job.image && <Image src={job.image.src} alt={`${job.company} logo`} width="340" height="340"/>}
+        {/*{job.image && <Image src={job.image.src} alt={`${job.company} logo`} width="340" height="340"/>}*/}
     </div>
 }
 
@@ -40,9 +32,9 @@ export default function WorkExperienceSection({jobs}: {jobs: Job[]}) {
     const last_job: Job = startDates[startDates.length - 1]
     const years_of_experience = last_job.endDate.getFullYear() - first_job.startDate.getFullYear()
 
-    return <section className={"section"} id={"jobs"}>
+    return <section id={"work-experience"}>
         <h1 className={"section-title"}>
-            <a href={"#jobs"}>
+            <a href={"#work-experience"}>
                 {`Work Experience`}
             </a>
             <span id={"years-of-experience"}>

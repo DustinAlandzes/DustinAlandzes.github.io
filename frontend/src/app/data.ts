@@ -1,10 +1,9 @@
-import AWSSolutionsArchitectBadge from './aws-solutions-architect-associate.png'
-import TerraformAssociateBadge from './terraform-associate.png'
-import DrChronoLogo from './drchrono.png'
-import DrChronoLogoCharcoal from './drchrono_logo_charcoal.png'
-import DrChronoLogoWhite from './drchrono_logo_white.png'
-import LegalistLogo from './legalist_white.svg'
-import LegalistLogoDark from './legalist_dark.png'
+import AWSSolutionsArchitectBadge from '../../public/aws-solutions-architect-associate.png'
+import TerraformAssociateBadge from '../../public/terraform-associate.png'
+import DrChronoLogoCharcoal from '../../public/drchrono_logo_charcoal.png'
+import DrChronoLogoWhite from '../../public/drchrono_logo_white.png'
+import LegalistLogo from '../../public/legalist_white.svg'
+import LegalistLogoDark from '../../public/legalist_dark.png'
 import { StaticImageData } from "next/image"
 
 export interface Job {
@@ -15,7 +14,6 @@ export interface Job {
     endDate: Date;
     image?: StaticImageData;
     url?: URL;
-    // dark image?
 }
 
 export const Jobs: Job[] = [
@@ -90,7 +88,6 @@ export const certifications: Certification[] = [
         startDate: new Date(2022),
         expireDate: new Date(2024)
     },
-
 ];
 
 
@@ -98,38 +95,27 @@ export interface Project {
     name: string;
     description: string;
     url: URL;
-    image: null; // import image and convert this type to StaticImageData
 }
 
 export const projects: Project[] = [
     {
-        name: "Super Mario 64 Star Select",
-        url: new URL("https://github.com/DustinAlandzes/super-mario-64-star-select"),
-        description: "A recreation of the Super Mario 64 Star Select Screen.",
-        image: null
-    },
-    {
-        name: "Super Smash Bros. Melee models and animations",
-        url: new URL("https://github.com/DustinAlandzes/react-three-fiber-ssbm"),
-        description: "Using react-three-fiber to render Super Smash Brothers Melee models and animations.",
-        image: null
-    },
-    {
-        name: "Scrape a DuoLingo course and turn it into an Anki deck",
-        url: new URL("https://github.com/DustinAlandzes/scrape-duolingo-audio"),
-        description: "A project to scrape DuoLingo courses and turn them into Anki decks.",
-        image: null
-    },
-    {
-        name: "Terraform module that creates an AWS S3 bucket for use with the Joplin note taking app",
+        name: "joplin-s3-bucket",
         url: new URL("https://github.com/DustinAlandzes/terraform-aws-joplin-s3-bucket"),
         description: "A Terraform module for creating an S3 bucket to store notes from Joplin.",
-        image: null
     },
-    // {
-    //     name: "Hangul learning app",
-    //     url: new URL("https://google.com/"),
-    //     description: "",
-    //     image: null
-    // },
+    {
+        name: "Web Scraper for DuoLingo",
+        url: new URL("https://github.com/DustinAlandzes/scrape-duolingo-audio"),
+        description: "A project to scrape DuoLingo courses and turn them into Anki decks.",
+    },
+    {
+        name: "Super Mario 64 Star Select",
+        url: new URL("https://github.com/DustinAlandzes/super-mario-64-star-select"),
+        description: "A recreation of the Super Mario 64 star select screen.",
+    },
+    {
+        name: "Super Smash Bros. Melee models and animations in the browser",
+        url: new URL("https://github.com/DustinAlandzes/react-three-fiber-ssbm"),
+        description: "Use React Three Fiber to render Super Smash Brothers Melee models and animations.",
+    },
 ]
