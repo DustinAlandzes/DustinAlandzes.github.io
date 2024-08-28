@@ -20,8 +20,8 @@ export const Jobs: Job[] = [
     {
         company: "DrChrono",
         position: "Software Engineer",
-        startDate: new Date(2020, 2),
-        endDate: new Date(2024, 11),
+        startDate: new Date(2020, 1, 1),
+        endDate: new Date(2023, 10, 1),
         description: "Built features and fixed bugs for an electronic health record.",
 
         //https://www.drchrono.com/ehr-emr/logos/ ...
@@ -31,8 +31,8 @@ export const Jobs: Job[] = [
     {
         company: "Legalist",
         position: "Junior Software Developer",
-        startDate: new Date(2019, 7),
-        endDate: new Date(2019, 10),
+        startDate: new Date(2019, 3),
+        endDate: new Date(2019, 8),
         description: "Built and monitored web scrapers that gathered lawsuits from major US counties.",
         image: LegalistLogoDark,
         url: new URL("https://www.legalist.com/")
@@ -40,22 +40,22 @@ export const Jobs: Job[] = [
     {
         company: "Freelance Web Development",
         position: "Full-stack Web Developer",
-        startDate: new Date(2017, 12),
-        endDate: new Date(2019, 6),
+        startDate: new Date(2018, 0),
+        endDate: new Date(2019, 3),
         description: "Took customer requirements and used Python, Django and React to implement them for a social media website.",
     },
     {
         company: "N-Compass TV/Evergreen Digital",
         position: "System Administrator",
-        startDate: new Date(2014, 9),
-        endDate: new Date(2017, 12),
+        startDate: new Date(2014, 7),
+        endDate: new Date(2017, 11),
         description: "Built a web app hosted on AWS using Python and JavaScript for displaying information on screens in businesses.",
     },
     {
         company: "Armando Montelongo",
         position: "Web Development Intern",
-        startDate: new Date(2014, 7),
-        endDate: new Date(2014, 9),
+        startDate: new Date(2014, 5),
+        endDate: new Date(2014, 7),
         description: "Added features to an event management platform using JavaScript.",
     },
 
