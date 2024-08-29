@@ -68,7 +68,6 @@ function BackToTheTop() {
     // https://cddm.medium.com/react-scroll-to-top-button-4440d4c4e4d4
     useEffect(() => {
         const handleScrollToTopButtonVisiblity = () => {
-            console.log(window.scrollY)
           window.scrollY < 300 ? setAtTheTop(true) : setAtTheTop(false);
         };
         handleScrollToTopButtonVisiblity()
