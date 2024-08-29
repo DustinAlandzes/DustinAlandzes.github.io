@@ -23,7 +23,7 @@ function CertificationItem({certification}: { certification: Certification }): J
 
 
 export default function CertificationsSection({certifications}: {certifications: Certification[]}) {
-    return <section id={"certifications"}>
+    return <section id={"certifications"} tabIndex={0}>
         <h1 className={"section-title"}>
             <a href={"#certifications"}>Certifications</a>
         </h1>

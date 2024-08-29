@@ -62,6 +62,31 @@ function Header(): JSX.Element {
     </header>
 }
 
+function BackToTheTop() {
+
+    const [atTheTop, setAtTheTop] = useState(true);
+    // https://cddm.medium.com/react-scroll-to-top-button-4440d4c4e4d4
+    useEffect(() => {
+        const handleScrollToTopButtonVisiblity = () => {
+            console.log(window.scrollY)
+          window.scrollY < 300 ? setAtTheTop(true) : setAtTheTop(false);
+        };
+        handleScrollToTopButtonVisiblity()
+        window.addEventListener("scroll", handleScrollToTopButtonVisiblity);
+
+        return () => {
+          window.removeEventListener("scroll", handleScrollToTopButtonVisiblity);
+        };
+    }, []);
+
+    if (atTheTop) {
+        return null
+    } else {
+        return <span id={"back-to-the-top-link"} onClick={() => {window.scrollTo(0, 0)}}>
+            {"🔝"}
+        </span>
+    }
+}
 
 function Footer() {
         return <footer>
@@ -70,9 +95,6 @@ function Footer() {
                 {"https://linkedin.com/in/dustinalandzes"}
             </a>
         </address>
-        <span id={"back-to-the-top-link"} onClick={() => {
-            window.scrollTo(0, 0)
-        }}>back to the top</span>
     </footer>;
 }
 
@@ -86,6 +108,7 @@ export default function Home(): JSX.Element {
                 <ProjectsSection projects={projects} />
                 <ContactSection/>
             </main>
+            <BackToTheTop/>
             <Footer />
         </>
     )

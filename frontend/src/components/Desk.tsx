@@ -7,7 +7,7 @@ Files: desk.glb [6.59KB] > /Users/dustinalandzes/PycharmProjects/DustinAlandzes.
 import * as THREE from 'three'
 import React from 'react'
 import {useGLTF} from '@react-three/drei'
-import {GLTF} from 'three-stdlib'
+import {GLTF} from "three-stdlib"
 
 type GLTFResult = GLTF & {
     nodes: {

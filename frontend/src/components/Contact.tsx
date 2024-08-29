@@ -48,7 +48,7 @@ export default function ContactSection(): JSX.Element {
             </div>
         </section>
     } else {
-         return <section id={"contact"}>
+         return <section id={"contact"} tabIndex={0}>
              <h1 className={"section-title"}>
                  <a href={"#contact"}>Get in Touch</a>
              </h1>
@@ -64,6 +64,8 @@ export default function ContactSection(): JSX.Element {
                                 placeholder={"Name"}
                                 aria-invalid={errors.name ? "true" : "false"}
                                 id={"contact-form-input-name"}
+                                type={"text"}
+                                autoComplete={"name"}
                          />
                          {errors.name && <span role={"alert"}>{errors.name.message}</span>}
                      </div>
@@ -75,6 +77,7 @@ export default function ContactSection(): JSX.Element {
                                 placeholder={"example@domain.tld"}
                                 aria-invalid={errors.email ? "true" : "false"}
                                 id={"contact-form-input-email"}
+                                autoComplete={"email"}
                          />
                          {errors.email && <span role="alert">{errors.email.message}</span>}
                      </div>
@@ -89,7 +92,7 @@ export default function ContactSection(): JSX.Element {
                      {errors?.root?.serverError.type === 400 && <p>server response message</p>}
 
                      <div className={"form-group"}>
-                         <input type={"submit"} id={"submit-contact-button"}/>
+                         <input type={"submit"} role={"button"} id={"submit-contact-button"}/>
                      </div>
 
                  </form>

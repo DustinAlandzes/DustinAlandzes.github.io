@@ -27,12 +27,13 @@ function JobItem({job}: {job: Job}): JSX.Element {
 }
 
 export default function WorkExperienceSection({jobs}: {jobs: Job[]}) {
-    const startDates = jobs.toSorted((a, b) => a.startDate.getFullYear() - b.startDate.getFullYear())
-    const first_job: Job = startDates[0]
-    const last_job: Job = startDates[startDates.length - 1]
+    jobs.sort((a: Job, b: Job) => a.startDate.getFullYear() - b.startDate.getFullYear())
+
+    const first_job: Job = jobs[0]
+    const last_job: Job = jobs[jobs.length - 1]
     const years_of_experience = last_job.endDate.getFullYear() - first_job.startDate.getFullYear()
 
-    return <section id={"work-experience"}>
+    return <section id={"work-experience"} tabIndex={0}>
         <h1 className={"section-title"}>
             <a href={"#work-experience"}>
                 {`Work Experience`}
