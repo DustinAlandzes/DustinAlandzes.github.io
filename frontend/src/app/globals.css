@@ -17,9 +17,6 @@ header {
     margin-right: 2rem;
 }
 
-header #name {
-}
-
 footer {
     display: flex;
     justify-content: space-evenly;
@@ -32,19 +29,10 @@ main {
     margin: 2rem;
 }
 
-
 main section {
     display: grid;
     border-radius: 10px;
     background-color: #FFFFFF;
-}
-
-.certification-item img:hover, #linkedin-icon img:hover, #github-icon img:hover  {
-    transform: scale(1.1);
-}
-
-#back-to-the-top-link:hover {
-    cursor: pointer;
 }
 
 section {
@@ -59,12 +47,6 @@ section {
     justify-content: space-between;
 }
 
-#years-of-experience {
-    color: #969696;
-    font-size: 1rem;
-    align-self: center;
-}
-
 .section-title a {
     text-decoration: none;
     color: #000000;
@@ -74,9 +56,38 @@ section {
     display: grid;
 }
 
+#back-to-the-top-link {
+    font-size: 2rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    border: black 1px solid;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    min-width: 5rem;
+    text-align: center;
+}
+
+#back-to-the-top-link:hover {
+    cursor: pointer;
+    background-color: #f5f7f8;
+}
+
+#years-of-experience {
+    font-size: 1rem;
+    align-self: center;
+}
+
 #certification-list {
-    display: grid;
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.certification-item img:hover, #linkedin-icon img:hover, #github-icon img:hover {
+    transform: scale(1.1);
 }
 
 #contact #contact-email {
@@ -85,21 +96,51 @@ section {
 
 #contact-form {
     display: grid;
+    tab-index: 1
 }
 
 #contact-form .form-group {
     display: grid;
 }
 
-#contact-form input, #contact-form textarea {
+#contact-form input[type=text], #contact-form input[type=email], #contact-form textarea {
     background-color: #f1f1f1;
     padding: .5rem;
     border-radius: 10px;
     margin: .5rem;
     border: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
 }
 
-#submit-contact-button:hover {
-    background-color: #fff;
-    border: 1px solid black;
+#contact-form input[type=submit] {
+    background-color: #f1f1f1;
+    padding: .5rem;
+    border-radius: 10px;
+    margin: .5rem;
+    border: 0;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+#contact-form input[type=submit]:hover   {
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+textarea {
+   font-family: inherit;
+   font-size: inherit;
+}
+
+#open-hamburger-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: white;
+    padding: 2rem;
+    z-index: 9;
+    font-size: 1rem;
 }

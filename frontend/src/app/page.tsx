@@ -62,18 +62,73 @@ function Header(): JSX.Element {
     </header>
 }
 
+function BackToTheTop() {
+
+    const [atTheTop, setAtTheTop] = useState(true);
+    // https://cddm.medium.com/react-scroll-to-top-button-4440d4c4e4d4
+    useEffect(() => {
+        const handleScrollToTopButtonVisiblity = () => {
+          window.scrollY < 300 ? setAtTheTop(true) : setAtTheTop(false);
+        };
+        handleScrollToTopButtonVisiblity()
+        window.addEventListener("scroll", handleScrollToTopButtonVisiblity);
+
+        return () => {
+          window.removeEventListener("scroll", handleScrollToTopButtonVisiblity);
+        };
+    }, []);
+
+    if (atTheTop) {
+        return null
+    } else {
+        return <span id={"back-to-the-top-link"} onClick={() => {window.scrollTo(0, 0)}}>
+            {"⬆"}
+        </span>
+    }
+}
 
 function Footer() {
-        return <footer>
+    return <footer>
         <address>
             <a href={"https://linkedin.com/in/dustinalandzes"} target={"_blank"}>
                 {"https://linkedin.com/in/dustinalandzes"}
             </a>
         </address>
-        <span id={"back-to-the-top-link"} onClick={() => {
-            window.scrollTo(0, 0)
-        }}>back to the top</span>
     </footer>;
+}
+
+function HamburgerMenu() {
+    const [open, setOpen] = useState(false);
+
+    if (!open) {
+        return <>
+            <div onClick={() => {
+                setOpen(!open);
+            }}>{"🍔"}</div>
+        </>
+    }
+
+    return <div id={"open-hamburger-menu"}>
+        <div onClick={() => {
+            setOpen(!open);
+        }}>{"🍔"}</div>
+        <div style={{
+            display: "grid"
+        }}>
+            <div>
+            <a href={"#certifications"}>Certifications</a>
+                </div>
+            <div>
+            <a href={"#work-experience"}>Work Experience</a>
+                </div>
+            <div>
+            <a href={"#projects"}>Projects</a>
+                </div>
+            <div>
+            <a href={"#contact"}>Get in Touch</a>
+            </div>
+        </div>
+    </div>
 }
 
 export default function Home(): JSX.Element {
@@ -86,6 +141,7 @@ export default function Home(): JSX.Element {
                 <ProjectsSection projects={projects} />
                 <ContactSection/>
             </main>
+            <BackToTheTop/>
             <Footer />
         </>
     )
