@@ -10,11 +10,8 @@ function CertificationItem({certification}: { certification: Certification }): J
         <a href={certification.url.toString()} target={"_blank"}>
             <Image src={certification.image.src}
                    alt={`${certification.name} Badge`}
-                   width="250"
-                   height="250"
-                   style={{
-                        objectFit: 'contain',
-                   }}
+                   width="200"
+                   height="200"
                    priority
             />
         </a>

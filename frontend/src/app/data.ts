@@ -41,7 +41,7 @@ export const Jobs: Job[] = [
         company: "Freelance Web Development",
         position: "Full-stack Web Developer",
         startDate: new Date(2018, 0),
-        endDate: new Date(2019, 3),
+        endDate: new Date(2019, 2),
         description: "Took customer requirements and used Python, Django and React to implement them for a social media website.",
     },
     {
@@ -54,11 +54,10 @@ export const Jobs: Job[] = [
     {
         company: "Armando Montelongo",
         position: "Web Development Intern",
-        startDate: new Date(2014, 5),
+        startDate: new Date(2014, 4),
         endDate: new Date(2014, 7),
         description: "Added features to an event management platform using JavaScript.",
     },
-
 ]
 
 

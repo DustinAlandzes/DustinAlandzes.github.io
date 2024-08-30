@@ -82,19 +82,53 @@ function BackToTheTop() {
         return null
     } else {
         return <span id={"back-to-the-top-link"} onClick={() => {window.scrollTo(0, 0)}}>
-            {"🔝"}
+            {"⬆"}
         </span>
     }
 }
 
 function Footer() {
-        return <footer>
+    return <footer>
         <address>
             <a href={"https://linkedin.com/in/dustinalandzes"} target={"_blank"}>
                 {"https://linkedin.com/in/dustinalandzes"}
             </a>
         </address>
     </footer>;
+}
+
+function HamburgerMenu() {
+    const [open, setOpen] = useState(false);
+
+    if (!open) {
+        return <>
+            <div onClick={() => {
+                setOpen(!open);
+            }}>{"🍔"}</div>
+        </>
+    }
+
+    return <div id={"open-hamburger-menu"}>
+        <div onClick={() => {
+            setOpen(!open);
+        }}>{"🍔"}</div>
+        <div style={{
+            display: "grid"
+        }}>
+            <div>
+            <a href={"#certifications"}>Certifications</a>
+                </div>
+            <div>
+            <a href={"#work-experience"}>Work Experience</a>
+                </div>
+            <div>
+            <a href={"#projects"}>Projects</a>
+                </div>
+            <div>
+            <a href={"#contact"}>Get in Touch</a>
+            </div>
+        </div>
+    </div>
 }
 
 export default function Home(): JSX.Element {

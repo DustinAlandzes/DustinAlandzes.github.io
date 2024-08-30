@@ -72,7 +72,7 @@ section {
 
 #back-to-the-top-link:hover {
     cursor: pointer;
-    background-color: gray;
+    background-color: #f5f7f8;
 }
 
 #years-of-experience {
@@ -81,8 +81,9 @@ section {
 }
 
 #certification-list {
-    display: grid;
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .certification-item img:hover, #linkedin-icon img:hover, #github-icon img:hover {
@@ -108,4 +109,38 @@ section {
     border-radius: 10px;
     margin: .5rem;
     border: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+#contact-form input[type=submit] {
+    background-color: #f1f1f1;
+    padding: .5rem;
+    border-radius: 10px;
+    margin: .5rem;
+    border: 0;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+#contact-form input[type=submit]:hover   {
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+textarea {
+   font-family: inherit;
+   font-size: inherit;
+}
+
+#open-hamburger-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: white;
+    padding: 2rem;
+    z-index: 9;
+    font-size: 1rem;
 }

@@ -8,14 +8,14 @@ export default function ContactSection(): JSX.Element {
         body: string,
     }
 
+    const [submitting, setSubmitting] = useState(false);
     const [sent, setSent] = useState(false);
     const { register, handleSubmit, formState: { errors }, setError } = useForm<FormValues>({
         criteriaMode: 'all'
     });
 
     const onSubmit: SubmitHandler<FormValues> = async data => {
-        console.log(data);
-        // TODO: Captcha verification
+        setSubmitting(true)
         const CONTACT_FORM_ENDPOINT = "https://lp2rry5bz9.execute-api.us-east-1.amazonaws.com/"
         try {
             const response: Response = await fetch(CONTACT_FORM_ENDPOINT, {
@@ -23,13 +23,14 @@ export default function ContactSection(): JSX.Element {
                 body: JSON.stringify(data)
             })
             const json = await response.json()
+            setSent(true);
         } catch (error: any) {
             setError('root.serverError', {
               type: error.statusCode,
             })
             setSent(false)
         }
-        setSent(true);
+        setSubmitting(false)
     }
 
     if (sent) {
@@ -57,7 +58,7 @@ export default function ContactSection(): JSX.Element {
                      {"You can email me at "}<a href={"mailto:fezf00@gmail.com"} style={{color: "blue"}}>{"fezf00@gmail.com"}</a>{" or submit the form below."}
                  </div>
                  <form onSubmit={handleSubmit(onSubmit)} id={"contact-form"}>
-
+                     {submitting && "Please wait..."}
                      <div className={"form-group"}>
                          <label htmlFor={"contact-form-input-name"}>Name</label>
                          <input {...register("name", {required: "Name is required"})}
@@ -87,7 +88,8 @@ export default function ContactSection(): JSX.Element {
                          <textarea {...register("body", {required: false})}
                                    placeholder={"Hello! My name is ..."}
                                    rows={5}
-                                   id="contact-form-input-body"/>
+                                   id="contact-form-input-body"
+                         />
                      </div>
                      {errors?.root?.serverError.type === 400 && <p>server response message</p>}
 
