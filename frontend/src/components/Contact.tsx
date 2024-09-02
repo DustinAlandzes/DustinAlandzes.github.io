@@ -51,7 +51,7 @@ export default function ContactSection(): JSX.Element {
     } else {
          return <section id={"contact"} tabIndex={0}>
              <h1 className={"section-title"}>
-                 <a href={"#contact"}>Get in Touch</a>
+                 <a href={"#contact"}>Contact Me</a>
              </h1>
              <div className={"section-body"}>
                  <div id={"contact-email"}>
