@@ -16,8 +16,8 @@ export default function ContactSection(): JSX.Element {
 
     const onSubmit: SubmitHandler<FormValues> = async data => {
         setSubmitting(true)
-        const CONTACT_FORM_ENDPOINT = "https://lp2rry5bz9.execute-api.us-east-1.amazonaws.com/"
         try {
+            const CONTACT_FORM_ENDPOINT = process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT || "https://httpbin.org/post"
             const response: Response = await fetch(CONTACT_FORM_ENDPOINT, {
                 method: "POST",
                 body: JSON.stringify(data)

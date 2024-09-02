@@ -9,7 +9,6 @@ from mypy_boto3_sns.service_resource import SNSServiceResource
 from pydantic import BaseModel
 
 
-# APIGatewayProxyEvent
 class ContactFormSubmission(BaseModel):
     name: str
     email: str

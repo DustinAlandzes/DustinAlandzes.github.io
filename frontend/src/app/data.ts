@@ -84,8 +84,8 @@ export const certifications: Certification[] = [
         image: TerraformAssociateBadge,
         url: new URL("https://www.credly.com/badges/d4012af6-1c9f-4ca8-aa2a-931c2c3c8e5b/public_url"),
         description: "Earners of the HashiCorp Certified: Terraform Associate certification know the basic concepts, skills, and use cases associated with open source HashiCorp Terraform. ",
-        startDate: new Date(2022),
-        expireDate: new Date(2024)
+        startDate: new Date(2021, 10, 1),
+        expireDate: new Date(2023, 10, 1)
     },
 ];
 
@@ -97,6 +97,11 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+    {
+        name: 'terraform-aws-github-pages-lambda',
+        description: 'A Terraform module to quickly start a new project using Github Pages and AWS Lambda.',
+        url: new URL("https://registry.terraform.io/modules/DustinAlandzes/github-pages-lambda/aws/latest")
+    },
     {
         name: "joplin-s3-bucket",
         url: new URL("https://github.com/DustinAlandzes/terraform-aws-joplin-s3-bucket"),
