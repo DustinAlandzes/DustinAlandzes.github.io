@@ -22,7 +22,7 @@ export default function ContactSection(): JSX.Element {
                 method: "POST",
                 body: JSON.stringify(data)
             })
-            const json = await response.json()
+            await response.json()
             setSent(true);
         } catch (error: any) {
             setError('root.serverError', {
@@ -94,7 +94,7 @@ export default function ContactSection(): JSX.Element {
                      {errors?.root?.serverError.type === 400 && <p>server response message</p>}
 
                      <div className={"form-group"}>
-                         <input type={"submit"} role={"button"} id={"submit-contact-button"}/>
+                         <input type={"submit"} role={"button"} id={"submit-contact-button"} disabled={submitting}/>
                      </div>
 
                  </form>

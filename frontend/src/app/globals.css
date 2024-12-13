@@ -90,6 +90,10 @@ section {
     transform: scale(1.1);
 }
 
+#linkedin-icon, #github-icon {
+    margin: 1rem;
+}
+
 #contact #contact-email {
     margin: 1rem auto;
 }
