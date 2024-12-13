@@ -67,14 +67,14 @@ function BackToTheTop() {
     const [atTheTop, setAtTheTop] = useState(true);
     // https://cddm.medium.com/react-scroll-to-top-button-4440d4c4e4d4
     useEffect(() => {
-        const handleScrollToTopButtonVisiblity = () => {
+        const handleScrollToTopButtonVisibility = () => {
           window.scrollY < 300 ? setAtTheTop(true) : setAtTheTop(false);
         };
-        handleScrollToTopButtonVisiblity()
-        window.addEventListener("scroll", handleScrollToTopButtonVisiblity);
+        handleScrollToTopButtonVisibility()
+        window.addEventListener("scroll", handleScrollToTopButtonVisibility);
 
         return () => {
-          window.removeEventListener("scroll", handleScrollToTopButtonVisiblity);
+          window.removeEventListener("scroll", handleScrollToTopButtonVisibility);
         };
     }, []);
 
@@ -95,40 +95,6 @@ function Footer() {
             </a>
         </address>
     </footer>;
-}
-
-function HamburgerMenu() {
-    const [open, setOpen] = useState(false);
-
-    if (!open) {
-        return <>
-            <div onClick={() => {
-                setOpen(!open);
-            }}>{"🍔"}</div>
-        </>
-    }
-
-    return <div id={"open-hamburger-menu"}>
-        <div onClick={() => {
-            setOpen(!open);
-        }}>{"🍔"}</div>
-        <div style={{
-            display: "grid"
-        }}>
-            <div>
-            <a href={"#certifications"}>Certifications</a>
-                </div>
-            <div>
-            <a href={"#work-experience"}>Work Experience</a>
-                </div>
-            <div>
-            <a href={"#projects"}>Projects</a>
-                </div>
-            <div>
-            <a href={"#contact"}>Get in Touch</a>
-            </div>
-        </div>
-    </div>
 }
 
 export default function Home(): JSX.Element {

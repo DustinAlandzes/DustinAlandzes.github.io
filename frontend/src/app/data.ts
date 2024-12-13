@@ -1,8 +1,7 @@
-import AWSSolutionsArchitectBadge from '../../public/aws-solutions-architect-associate.png'
+import AWSSolutionsArchitectAssociateBadge from '../../public/aws-solutions-architect-associate.png'
+import AWSSolutionsArchitectProfessionalBadge from '../../public/aws-solutions-architect-professional.png'
 import TerraformAssociateBadge from '../../public/terraform-associate.png'
 import DrChronoLogoCharcoal from '../../public/drchrono_logo_charcoal.png'
-import DrChronoLogoWhite from '../../public/drchrono_logo_white.png'
-import LegalistLogo from '../../public/legalist_white.svg'
 import LegalistLogoDark from '../../public/legalist_dark.png'
 import { StaticImageData } from "next/image"
 
@@ -72,20 +71,28 @@ export interface Certification {
 
 export const certifications: Certification[] = [
     {
-        name: "AWS Certified Solutions Architect – Associate",
-        image: AWSSolutionsArchitectBadge,
-        url: new URL("https://cp.certmetrics.com/amazon/en/public/verify/credential/bbfb48da3bd44da7a53e6281502fd230"), //https://www.credly.com/badges/86dbff9e-c208-41ac-9acd-fcb3f5320ed8/public_url",
-        description: "Earners of this certification have a comprehensive understanding of AWS services and technologies.",
-        startDate: new Date(2024, 8, 1),
-        expireDate: new Date(2027, 8, 1),
-    },
-    {
         name: "HashiCorp Certified: Terraform Associate (002)\n",
         image: TerraformAssociateBadge,
         url: new URL("https://www.credly.com/badges/d4012af6-1c9f-4ca8-aa2a-931c2c3c8e5b/public_url"),
         description: "Earners of the HashiCorp Certified: Terraform Associate certification know the basic concepts, skills, and use cases associated with open source HashiCorp Terraform. ",
         startDate: new Date(2021, 10, 1),
         expireDate: new Date(2023, 10, 1)
+    },
+    {
+        name: "AWS Certified Solutions Architect – Associate",
+        image: AWSSolutionsArchitectAssociateBadge,
+        url: new URL("https://cp.certmetrics.com/amazon/en/public/verify/credential/bbfb48da3bd44da7a53e6281502fd230"), //https://www.credly.com/badges/86dbff9e-c208-41ac-9acd-fcb3f5320ed8/public_url",
+        description: "Earners of this certification have a comprehensive understanding of AWS services and technologies.",
+        startDate: new Date(2024, 8, 1),
+        expireDate: new Date(2027, 8, 1),
+    },
+    {
+        name: "AWS Certified Solutions Architect – Professional",
+        image: AWSSolutionsArchitectProfessionalBadge,
+        url: new URL("https://www.credly.com/badges/acd8e396-c679-443b-baaf-5135dc0934d8/public_url"),
+        description: "Earners of this certification have an extensive understanding of designing technical strategies to accomplish specific business goals. They demonstrated the ability to balance best practices and trade-offs based on business context. Badge owners are able to design solutions across multiple platforms and providers.",
+        startDate: new Date(2024, 12, 11),
+        expireDate: new Date(2027, 12, 11),
     },
 ];
 
