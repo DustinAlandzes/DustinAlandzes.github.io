@@ -26,8 +26,11 @@ export default function CertificationsSection({certifications}: {certifications:
         </h1>
         <div className={"section-body"}>
             <div id={"certification-list"}>
-                {certifications.map((certification, index) => <CertificationItem key={index}
-                                                                                 certification={certification}/>)}
+                {certifications
+                    .toSorted((a, b) => b.startDate.getTime() - a.startDate.getTime())
+                    .map((certification, index) =>
+                        <CertificationItem key={index} certification={certification}/>
+                    )}
             </div>
         </div>
     </section>

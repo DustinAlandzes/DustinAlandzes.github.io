@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import {Job} from "@/app/data";
 
@@ -17,9 +19,15 @@ function JobItem({job}: {job: Job}): JSX.Element {
                 {job.startDate.toLocaleDateString("en-US", {month: "long", year: "numeric"})}
             </time>
             {" - "}
-            <time dateTime={job.endDate.toISOString()}>
-                {job.endDate.toLocaleDateString("en-US", {month: "long", year: "numeric"})}
-            </time>
+            {job.endDate === null ?
+                <time dateTime={new Date().toISOString()}>
+                    {"Current"}
+                </time>
+            :
+                <time dateTime={job.endDate.toISOString()}>
+                    {job.endDate.toLocaleDateString("en-US", {month: "long", year: "numeric"})}
+                </time>
+            }
         </div>
         <p>{job.description}</p>
         {/*{job.image && <Image src={job.image.src} alt={`${job.company} logo`} width="340" height="340"/>}*/}
@@ -27,12 +35,22 @@ function JobItem({job}: {job: Job}): JSX.Element {
 }
 
 export default function WorkExperienceSection({jobs}: {jobs: Job[]}) {
-    const jobsCopy = [...jobs]
-    jobsCopy.sort((a: Job, b: Job) => a.startDate.getFullYear() - b.startDate.getFullYear())
-
-    const first_job: Job = jobsCopy[0]
-    const last_job: Job = jobsCopy[jobs.length - 1]
-    const years_of_experience = last_job.endDate.getFullYear() - first_job.startDate.getFullYear()
+    // calculate years of experience, sum the differences between each job's start and end
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#methods_of_the_date_object
+    const msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
+    const length_of_each_job: number[] = [];
+    jobs.forEach(job => {
+        // if it's a current job, count the number of days since now
+        if (job.endDate === null) {
+            const now = new Date();
+            const length_of_job_in_days = (now.getTime() - job.startDate.getTime()) / msPerDay;
+            length_of_each_job.push(length_of_job_in_days);
+        } else {
+            const length_of_job_in_days = (job.endDate.getTime() - job.startDate.getTime()) / msPerDay;
+            length_of_each_job.push(length_of_job_in_days);
+        }
+    })
+    const years_of_experience = Math.floor(length_of_each_job.reduce((acc, job) => acc + job, 0) / 365);
 
     return <section id={"work-experience"} tabIndex={0}>
         <h1 className={"section-title"}>

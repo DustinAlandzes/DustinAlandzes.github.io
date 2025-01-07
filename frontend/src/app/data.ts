@@ -10,12 +10,23 @@ export interface Job {
     position: string;
     description: string;
     startDate: Date;
-    endDate: Date;
+    endDate: Date | null;
     image?: StaticImageData;
     url?: URL;
 }
 
 export const Jobs: Job[] = [
+    {
+        company: "HP",
+        position: "Software Engineering Apprentice",
+        startDate: new Date(2025, 1, 27),
+        endDate: null,
+        description: "",
+
+        //https://www.drchrono.com/ehr-emr/logos/ ...
+        //image: DrChronoLogoCharcoal,
+        url: new URL("https://hp.com/")
+    },
     {
         company: "DrChrono",
         position: "Software Engineer",
@@ -78,14 +89,14 @@ export const certifications: Certification[] = [
         startDate: new Date(2021, 10, 1),
         expireDate: new Date(2023, 10, 1)
     },
-    {
-        name: "AWS Certified Solutions Architect – Associate",
-        image: AWSSolutionsArchitectAssociateBadge,
-        url: new URL("https://cp.certmetrics.com/amazon/en/public/verify/credential/bbfb48da3bd44da7a53e6281502fd230"), //https://www.credly.com/badges/86dbff9e-c208-41ac-9acd-fcb3f5320ed8/public_url",
-        description: "Earners of this certification have a comprehensive understanding of AWS services and technologies.",
-        startDate: new Date(2024, 8, 1),
-        expireDate: new Date(2027, 8, 1),
-    },
+    // {
+    //     name: "AWS Certified Solutions Architect – Associate",
+    //     image: AWSSolutionsArchitectAssociateBadge,
+    //     url: new URL("https://cp.certmetrics.com/amazon/en/public/verify/credential/bbfb48da3bd44da7a53e6281502fd230"), //https://www.credly.com/badges/86dbff9e-c208-41ac-9acd-fcb3f5320ed8/public_url",
+    //     description: "Earners of this certification have a comprehensive understanding of AWS services and technologies.",
+    //     startDate: new Date(2024, 8, 1),
+    //     expireDate: new Date(2027, 8, 1),
+    // },
     {
         name: "AWS Certified Solutions Architect – Professional",
         image: AWSSolutionsArchitectProfessionalBadge,
