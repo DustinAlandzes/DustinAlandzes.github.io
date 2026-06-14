@@ -1,4 +1,4 @@
-import AWSSolutionsArchitectAssociateBadge from '../../public/aws-solutions-architect-associate.png'
+import AWSGenerativeAIDeveloperProfessionalBadge from '../../public/aws-generative-ai.png'
 import AWSSolutionsArchitectProfessionalBadge from '../../public/aws-solutions-architect-professional.png'
 import TerraformAssociateBadge from '../../public/terraform-associate.png'
 import DrChronoLogoCharcoal from '../../public/drchrono_logo_charcoal.png'
@@ -18,13 +18,10 @@ export interface Job {
 export const Jobs: Job[] = [
     {
         company: "HP",
-        position: "Software Engineering Apprentice",
+        position: "Software Applications Engineer",
         startDate: new Date(2025, 1, 27),
         endDate: null,
-        description: "",
-
-        //https://www.drchrono.com/ehr-emr/logos/ ...
-        //image: DrChronoLogoCharcoal,
+        description: "Full-stack developer building microservices using Python, TypeScript, React/Next.js.",
         url: new URL("https://hp.com/")
     },
     {
@@ -89,14 +86,6 @@ export const certifications: Certification[] = [
         startDate: new Date(2021, 10, 1),
         expireDate: new Date(2023, 10, 1)
     },
-    // {
-    //     name: "AWS Certified Solutions Architect – Associate",
-    //     image: AWSSolutionsArchitectAssociateBadge,
-    //     url: new URL("https://cp.certmetrics.com/amazon/en/public/verify/credential/bbfb48da3bd44da7a53e6281502fd230"), //https://www.credly.com/badges/86dbff9e-c208-41ac-9acd-fcb3f5320ed8/public_url",
-    //     description: "Earners of this certification have a comprehensive understanding of AWS services and technologies.",
-    //     startDate: new Date(2024, 8, 1),
-    //     expireDate: new Date(2027, 8, 1),
-    // },
     {
         name: "AWS Certified Solutions Architect – Professional",
         image: AWSSolutionsArchitectProfessionalBadge,
@@ -104,6 +93,14 @@ export const certifications: Certification[] = [
         description: "Earners of this certification have an extensive understanding of designing technical strategies to accomplish specific business goals. They demonstrated the ability to balance best practices and trade-offs based on business context. Badge owners are able to design solutions across multiple platforms and providers.",
         startDate: new Date(2024, 12, 11),
         expireDate: new Date(2027, 12, 11),
+    },
+    {
+        name: "AWS Certified Generative AI Developer - Professional",
+        image: AWSGenerativeAIDeveloperProfessionalBadge,
+        url: new URL("https://www.credly.com/badges/04cac11c-a0a8-4114-be6a-fc18bc4dafeb/public_url"),
+        description: "Earners of this certification have an extensive understanding of designing technical strategies to accomplish specific business goals. They demonstrated the ability to balance best practices and trade-offs based on business context. Badge owners are able to design solutions across multiple platforms and providers.",
+        startDate: new Date(2026, 5, 21),
+        expireDate: new Date(2029, 5, 21),
     },
 ];
 
