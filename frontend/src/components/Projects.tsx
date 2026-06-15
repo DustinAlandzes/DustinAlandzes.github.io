@@ -1,9 +1,9 @@
 import React from "react";
 
-import {Project} from "@/app/data";
+import { Project } from "@/app/data";
 
 function ProjectItem({
-    project}: {project: Project}): React.JSX.Element {
+    project }: { project: Project }): React.JSX.Element {
     return <div className={"project"}>
         <div className={"project-name"}>
             <a href={project.url.toString()}>{project.name}</a>
@@ -14,14 +14,14 @@ function ProjectItem({
     </div>
 }
 
-export default function ProjectsSection({projects}: {projects: Project[]}): React.JSX.Element {
+export default function ProjectsSection({ projects }: { projects: Project[] }): React.JSX.Element {
     return <section id={"projects"}>
         <h1 className={"section-title"}>
             <a href={"#projects"}>Projects</a>
         </h1>
         <div className={"section-body"}>
             <div id={"project-list"}>
-                {projects.map((project, index) => <ProjectItem key={index} project={project}/>)}
+                {projects.map((project, index) => <ProjectItem key={index} project={project} />)}
             </div>
         </div>
     </section>

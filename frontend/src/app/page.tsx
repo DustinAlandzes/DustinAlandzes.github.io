@@ -1,14 +1,14 @@
 'use client';
 
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Image from 'next/image';
 import GithubLogo from "../../public/github-mark.png";
 import LinkedInLogo from "../../public/In-Blue-128@2x.png";
 
-import {Vollkorn} from "next/font/google";
+import { Vollkorn } from "next/font/google";
 import { useTrail, a } from '@react-spring/web'
 
-import {certifications, Jobs, projects} from "@/app/data";
+import { certifications, Jobs, projects } from "@/app/data";
 
 import CertificationsSection from "@/components/Certifications";
 import WorkExperienceSection from "@/components/WorkExperience";
@@ -18,23 +18,23 @@ import ContactSection from "@/components/Contact";
 const vollkorn = Vollkorn({ subsets: ["latin"], weight: ['400'] });
 
 const Trail: React.FC<{ open: boolean, children: React.ReactNode }> = ({ open, children }) => {
-  const items = React.Children.toArray(children)
-  const trail = useTrail(items.length, {
-    config: { mass: 5, tension: 2000, friction: 200 },
-    opacity: open ? 1 : 0,
-    x: open ? 0 : 0,
-    height: open ? 110 : 0,
-    from: { opacity: 0, x: 0, height: 0 },
-  })
-  return (
-    <div>
-      {trail.map(({ height, ...style }, index) => (
-        <a.div key={index} style={style}>
-          <a.div style={{ height }}>{items[index]}</a.div>
-        </a.div>
-      ))}
-    </div>
-  )
+    const items = React.Children.toArray(children)
+    const trail = useTrail(items.length, {
+        config: { mass: 5, tension: 2000, friction: 200 },
+        opacity: open ? 1 : 0,
+        x: open ? 0 : 0,
+        height: open ? 110 : 0,
+        from: { opacity: 0, x: 0, height: 0 },
+    })
+    return (
+        <div>
+            {trail.map(({ height, ...style }, index) => (
+                <a.div key={index} style={style}>
+                    <a.div style={{ height }}>{items[index]}</a.div>
+                </a.div>
+            ))}
+        </div>
+    )
 }
 
 function Header(): React.JSX.Element {
@@ -59,10 +59,10 @@ function Header(): React.JSX.Element {
         </div>
         <div>
             <a href={"https://linkedin.com/in/dustinalandzes"} target={"_blank"} id={"linkedin-icon"}>
-                <Image src={LinkedInLogo} alt={"LinkedIn"} width={50}/>
+                <Image src={LinkedInLogo} alt={"LinkedIn"} width={50} />
             </a>
             <a href={"https://github.com/DustinAlandzes"} target={"_blank"} id={"github-icon"}>
-                <Image src={GithubLogo} alt={"GitHub"} width={50}/>
+                <Image src={GithubLogo} alt={"GitHub"} width={50} />
             </a>
         </div>
     </header>
@@ -74,20 +74,20 @@ function BackToTheTop() {
     // https://cddm.medium.com/react-scroll-to-top-button-4440d4c4e4d4
     useEffect(() => {
         const handleScrollToTopButtonVisibility = () => {
-                    setAtTheTop(window.scrollY < 300);
+            setAtTheTop(window.scrollY < 300);
         };
         handleScrollToTopButtonVisibility()
         window.addEventListener("scroll", handleScrollToTopButtonVisibility);
 
         return () => {
-          window.removeEventListener("scroll", handleScrollToTopButtonVisibility);
+            window.removeEventListener("scroll", handleScrollToTopButtonVisibility);
         };
     }, []);
 
     if (atTheTop) {
         return null
     } else {
-        return <span id={"back-to-the-top-link"} onClick={() => {window.scrollTo(0, 0)}}>
+        return <span id={"back-to-the-top-link"} onClick={() => { window.scrollTo(0, 0) }}>
             {"⬆"}
         </span>
     }
@@ -106,14 +106,14 @@ function Footer() {
 export default function Home(): React.JSX.Element {
     return (
         <>
-            <Header/>
+            <Header />
             <main>
-                <CertificationsSection certifications={certifications}/>
-                <WorkExperienceSection jobs={Jobs}/>
+                <CertificationsSection certifications={certifications} />
+                <WorkExperienceSection jobs={Jobs} />
                 <ProjectsSection projects={projects} />
-                <ContactSection/>
+                <ContactSection />
             </main>
-            <BackToTheTop/>
+            <BackToTheTop />
             <Footer />
         </>
     )

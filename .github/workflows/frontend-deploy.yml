@@ -2,7 +2,7 @@ name: DeployFrontend
 
 on:
   workflow_run:
-    workflows: [ "FrontendTest"  ]
+    workflows: ["FrontendTest"]
     branches:
       - master
     types:
@@ -38,8 +38,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22.x"
-          cache: 'npm'
-          cache-dependency-path: './frontend/package-lock.json'
+          cache: "npm"
+          cache-dependency-path: "./frontend/package-lock.json"
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:

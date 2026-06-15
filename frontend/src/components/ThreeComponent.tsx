@@ -1,7 +1,7 @@
 import * as THREE from 'three'
-import {Canvas, ThreeElements, useFrame} from "@react-three/fiber";
-import {Stage} from "@react-three/drei";
-import {useRef, useState} from "react";
+import { Canvas, ThreeElements, useFrame } from "@react-three/fiber";
+import { Stage } from "@react-three/drei";
+import { useRef, useState } from "react";
 
 function Box(props: ThreeElements['mesh']) {
   const meshRef = useRef<THREE.Mesh>(null!)
@@ -25,13 +25,13 @@ function Box(props: ThreeElements['mesh']) {
 }
 
 export default function ThreeComponent() {
-        return <section className={"section"} style={{
-            height: "80vh"
-        }}>
-            <Canvas>
-                <Stage>
-                    <Box position={[0, 0, 0]}/>
-                </Stage>
-            </Canvas>
-        </section>
+  return <section className={"section"} style={{
+    height: "80vh"
+  }}>
+    <Canvas>
+      <Stage>
+        <Box position={[0, 0, 0]} />
+      </Stage>
+    </Canvas>
+  </section>
 }

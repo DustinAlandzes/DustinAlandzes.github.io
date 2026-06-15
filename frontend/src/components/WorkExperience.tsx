@@ -1,10 +1,10 @@
 'use client';
 
 import React from "react";
-import {Job} from "@/app/data";
+import { Job } from "@/app/data";
 
 
-function JobItem({job}: {job: Job}): React.JSX.Element {
+function JobItem({ job }: { job: Job }): React.JSX.Element {
     return <div>
         <h1>
             {job.url ?
@@ -16,16 +16,16 @@ function JobItem({job}: {job: Job}): React.JSX.Element {
         {job.position}
         <div>
             <time dateTime={job.startDate.toISOString()}>
-                {job.startDate.toLocaleDateString("en-US", {month: "long", year: "numeric"})}
+                {job.startDate.toLocaleDateString("en-US", { month: "long", year: "numeric" })}
             </time>
             {" - "}
             {job.endDate === null ?
                 <time dateTime={new Date().toISOString()}>
                     {"Current"}
                 </time>
-            :
+                :
                 <time dateTime={job.endDate.toISOString()}>
-                    {job.endDate.toLocaleDateString("en-US", {month: "long", year: "numeric"})}
+                    {job.endDate.toLocaleDateString("en-US", { month: "long", year: "numeric" })}
                 </time>
             }
         </div>
@@ -34,7 +34,7 @@ function JobItem({job}: {job: Job}): React.JSX.Element {
     </div>
 }
 
-export default function WorkExperienceSection({jobs}: {jobs: Job[]}) {
+export default function WorkExperienceSection({ jobs }: { jobs: Job[] }) {
     // calculate years of experience, sum the differences between each job's start and end
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#methods_of_the_date_object
     const msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
@@ -65,7 +65,7 @@ export default function WorkExperienceSection({jobs}: {jobs: Job[]}) {
         </h1>
         <div className={"section-body"}>
             <div id={"jobs-list"}>
-                {jobs.map((job, index) => <JobItem key={index} job={job}/>)}
+                {jobs.map((job, index) => <JobItem key={index} job={job} />)}
             </div>
         </div>
     </section>
