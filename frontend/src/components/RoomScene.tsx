@@ -1,7 +1,7 @@
 'use client';
 
-import {Canvas, useFrame} from "@react-three/fiber";
-import {Environment, Image, Stage, useScroll} from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { Environment, Image, Stage } from "@react-three/drei";
 import Room from "@/components/Room";
 import Desk from "@/components/Desk";
 import Macbook from "@/components/Macbook";
@@ -21,7 +21,7 @@ export default function RoomScene() {
     // })
 
     return (
-        <div style={{width: "100%", height: "100%"}}>
+        <div style={{ width: "100%", height: "100dvh", minHeight: "100dvh" }}>
             <Canvas camera={{position: [0, 0, 0]}}>
                 <Stage>
                     <color args={['#241a1a']} attach="background"/>
@@ -35,8 +35,6 @@ export default function RoomScene() {
                         files={['px.png', 'nx.png', 'py.png', 'ny.png', 'pz.png', 'nz.png']}
                         path="/"
                         preset={"park"}
-                        scene={undefined} // adds the ability to pass a custom THREE.Scene, can also be a ref
-                        encoding={undefined} // adds the ability to pass a custom THREE.TextureEncoding (default: THREE.sRGBEncoding for an array of files and THREE.LinearEncoding for a single texture)
                     />
                     {/*<ScrollControls pages={3} damping={0.1}>*/}
                     {/*</ScrollControls>*/}

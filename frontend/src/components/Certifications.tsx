@@ -5,10 +5,10 @@ import {Certification} from "@/app/data";
 
 
 
-function CertificationItem({certification}: { certification: Certification }): JSX.Element {
-    return <div className={"certification-item"} style={{filter: certification.expireDate < new Date() ? 'grayscale(100%)' : ''}}>
-        <a href={certification.url.toString()} target={"_blank"}>
-            <Image src={certification.image.src}
+function CertificationItem({ certification, isExpired }: { certification: Certification, isExpired: boolean }): React.JSX.Element {
+    return <div className={"certification-item"} style={{ filter: isExpired ? 'grayscale(100%)' : undefined }}>
+        <a href={certification.url.toString()} target={"_blank"} rel={"noopener noreferrer"}>
+            <Image src={certification.image}
                    alt={`${certification.name} Badge`}
                    width="200"
                    height="200"
@@ -19,17 +19,23 @@ function CertificationItem({certification}: { certification: Certification }): J
 }
 
 
-export default function CertificationsSection({certifications}: {certifications: Certification[]}) {
-    return <section id={"certifications"} tabIndex={0}>
-        <h1 className={"section-title"}>
+export default function CertificationsSection({ certifications, renderedAt }: { certifications: Certification[], renderedAt: string }): React.JSX.Element {
+    const referenceDate = new Date(renderedAt)
+
+    return <section id={"certifications"} className={"site-section site-section--certifications"}>
+        <h2 className={"section-title"}>
             <a href={"#certifications"}>Certifications</a>
-        </h1>
+        </h2>
         <div className={"section-body"}>
-            <div id={"certification-list"}>
+            <div className={"certification-list"}>
                 {certifications
                     .toSorted((a, b) => b.startDate.getTime() - a.startDate.getTime())
-                    .map((certification, index) =>
-                        <CertificationItem key={index} certification={certification}/>
+                    .map((certification) =>
+                        <CertificationItem
+                            key={certification.name}
+                            certification={certification}
+                            isExpired={certification.expireDate < referenceDate}
+                        />
                     )}
             </div>
         </div>

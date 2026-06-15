@@ -34,6 +34,7 @@ def test_happy_path():
     expected = {
         "statusCode": 200,
         "success": True,
+        "message": "Contact form submitted successfully.",
     }
     assert actual == expected
     assert len(all_send_notifications) == 1
@@ -47,3 +48,26 @@ def test_happy_path():
         Body: {body['body']}
     """
     )
+
+
+@mock_aws
+def test_invalid_payload_returns_400_without_publishing():
+    sns = boto3.resource("sns", region_name="us-east-1")
+    topic = sns.create_topic(Name="TestTopic")
+
+    sns_backend = sns_backends[DEFAULT_ACCOUNT_ID]["us-east-1"]
+    all_send_notifications = sns_backend.topics[topic.arn].sent_notifications
+    assert len(all_send_notifications) == 0
+
+    sample_event = {
+        "body": json.dumps({"name": "Dustin", "email": "dustin@alandzes.com"})
+    }
+    with mock.patch.dict(os.environ, {"SNS_TOPIC_ARN": topic.arn}):
+        actual = handler(sample_event, LambdaContext())
+
+    assert actual == {
+        "statusCode": 400,
+        "success": False,
+        "message": "Invalid contact form submission.",
+    }
+    assert len(all_send_notifications) == 0

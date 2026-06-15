@@ -20,10 +20,10 @@ type GLTFResult = GLTF & {
     }
 }
 
-type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>>
+type ContextType = Record<string, React.ForwardRefExoticComponent<React.JSX.IntrinsicElements['mesh']>>
 
-export default function Model(props: JSX.IntrinsicElements['group']) {
-    const {nodes, materials} = useGLTF('/room-transformed.glb') as GLTFResult
+export default function Model(props: React.JSX.IntrinsicElements['group']) {
+    const {nodes, materials} = useGLTF('/room-transformed.glb') as unknown as GLTFResult
     const transparentMaterial = new MeshPhongMaterial({transparent: true, opacity: 0.3})
 
     const marbleTextureProps = useTexture({

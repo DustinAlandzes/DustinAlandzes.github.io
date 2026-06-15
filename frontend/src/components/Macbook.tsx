@@ -62,12 +62,12 @@ type GLTFResult = GLTF & {
     }
 }
 
-export default function Model(props: JSX.IntrinsicElements['group']) {
+export default function Model(props: React.JSX.IntrinsicElements['group']) {
     const group = useRef<THREE.Group>(null)
     const {
         nodes,
         materials
-    } = useGLTF('Macbook.gltf') as GLTFResult
+    } = useGLTF('Macbook.gltf') as unknown as GLTFResult
     return (
         <group ref={group} {...props} dispose={null}>
             <group position={[0, 0.52, 0,]} scale={[0.1, 0.1, 0.1,]}>

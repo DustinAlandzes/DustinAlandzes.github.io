@@ -240,3 +240,7 @@ fabric.properties
 
 # ignore folder created to package lambda
 /backend/contact_form_lambda/package/
+
+.idea/
+.fleet/
+__pycache__/
