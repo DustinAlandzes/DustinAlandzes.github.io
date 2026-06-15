@@ -9,6 +9,8 @@ import WorkExperienceSection from "@/components/WorkExperience";
 import ProjectsSection from "@/components/Projects";
 import ContactSection from "@/components/Contact";
 
+const renderedAt = "2026-06-15T00:00:00.000Z";
+
 describe('Home', () => {
   it('renders', () => {
     render(<Home />)
@@ -23,7 +25,7 @@ describe('Home', () => {
       expireDate: new Date(),
       image: AWSSolutionsArchitectBadge
     }]
-    render(<CertificationsSection certifications={certifications} />)
+    render(<CertificationsSection certifications={certifications} renderedAt={renderedAt} />)
   });
 
 
@@ -35,7 +37,7 @@ describe('Home', () => {
       startDate: new Date(),
       endDate: new Date(),
     }]
-    render(<WorkExperienceSection jobs={jobs}/>)
+    render(<WorkExperienceSection jobs={jobs} renderedAt={renderedAt} />)
   });
 
 

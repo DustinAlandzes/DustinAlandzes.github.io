@@ -4,7 +4,7 @@ import React from "react";
 import { Job } from "@/app/data";
 
 
-function JobItem({ job }: { job: Job }): React.JSX.Element {
+function JobItem({ job, renderedAt }: { job: Job, renderedAt: string }): React.JSX.Element {
     return <div>
         <h1>
             {job.url ?
@@ -20,7 +20,7 @@ function JobItem({ job }: { job: Job }): React.JSX.Element {
             </time>
             {" - "}
             {job.endDate === null ?
-                <time dateTime={new Date().toISOString()}>
+                <time dateTime={renderedAt}>
                     {"Current"}
                 </time>
                 :
@@ -34,16 +34,16 @@ function JobItem({ job }: { job: Job }): React.JSX.Element {
     </div>
 }
 
-export default function WorkExperienceSection({ jobs }: { jobs: Job[] }) {
+export default function WorkExperienceSection({ jobs, renderedAt }: { jobs: Job[], renderedAt: string }) {
     // calculate years of experience, sum the differences between each job's start and end
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#methods_of_the_date_object
     const msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
+    const referenceDate = new Date(renderedAt)
     const length_of_each_job: number[] = [];
     jobs.forEach(job => {
         // if it's a current job, count the number of days since now
         if (job.endDate === null) {
-            const now = new Date();
-            const length_of_job_in_days = (now.getTime() - job.startDate.getTime()) / msPerDay;
+            const length_of_job_in_days = (referenceDate.getTime() - job.startDate.getTime()) / msPerDay;
             length_of_each_job.push(length_of_job_in_days);
         } else {
             const length_of_job_in_days = (job.endDate.getTime() - job.startDate.getTime()) / msPerDay;
@@ -65,7 +65,7 @@ export default function WorkExperienceSection({ jobs }: { jobs: Job[] }) {
         </h1>
         <div className={"section-body"}>
             <div id={"jobs-list"}>
-                {jobs.map((job, index) => <JobItem key={index} job={job} />)}
+                {jobs.map((job, index) => <JobItem key={index} job={job} renderedAt={renderedAt} />)}
             </div>
         </div>
     </section>
