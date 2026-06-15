@@ -6,8 +6,8 @@ Files: desk.glb [6.59KB] > /Users/dustinalandzes/PycharmProjects/DustinAlandzes.
 
 import * as THREE from 'three'
 import React from 'react'
-import {useGLTF} from '@react-three/drei'
-import {GLTF} from "three-stdlib"
+import { useGLTF } from '@react-three/drei'
+import { GLTF } from "three-stdlib"
 
 type GLTFResult = GLTF & {
     nodes: {
@@ -22,11 +22,11 @@ type GLTFResult = GLTF & {
 
 
 export default function Model(props: React.JSX.IntrinsicElements['group']) {
-    const {nodes, materials} = useGLTF('/desk-transformed.glb') as unknown as GLTFResult
+    const { nodes, materials } = useGLTF('/desk-transformed.glb') as unknown as GLTFResult
     return (
         <group {...props} dispose={null}>
-            <mesh geometry={nodes.wood_top.geometry} material={materials.aCG_Wood067_1K_JPG} position={[0, 2, 0]}/>
-            <mesh geometry={nodes.leg.geometry} material={materials.aCG_Metal033_1K_JPG} position={[0, 1, -2.5]}/>
+            <mesh geometry={nodes.wood_top.geometry} material={materials.aCG_Wood067_1K_JPG} position={[0, 2, 0]} />
+            <mesh geometry={nodes.leg.geometry} material={materials.aCG_Metal033_1K_JPG} position={[0, 1, -2.5]} />
         </group>
     )
 }

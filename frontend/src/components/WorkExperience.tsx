@@ -1,7 +1,7 @@
 'use client';
 
 import React from "react";
-import {Job} from "@/app/data";
+import { Job } from "@/app/data";
 
 
 function JobItem({ job, renderedAt }: { job: Job, renderedAt: string }): React.JSX.Element {
@@ -16,16 +16,16 @@ function JobItem({ job, renderedAt }: { job: Job, renderedAt: string }): React.J
         <p className={"job-item__role"}>{job.position}</p>
         <div className={"job-item__dates"}>
             <time dateTime={job.startDate.toISOString()}>
-                {job.startDate.toLocaleDateString("en-US", {month: "long", year: "numeric"})}
+                {job.startDate.toLocaleDateString("en-US", { month: "long", year: "numeric" })}
             </time>
             {" - "}
             {job.endDate === null ?
                 <time dateTime={renderedAt}>
                     {"Current"}
                 </time>
-            :
+                :
                 <time dateTime={job.endDate.toISOString()}>
-                    {job.endDate.toLocaleDateString("en-US", {month: "long", year: "numeric"})}
+                    {job.endDate.toLocaleDateString("en-US", { month: "long", year: "numeric" })}
                 </time>
             }
         </div>
@@ -56,7 +56,7 @@ export default function WorkExperienceSection({ jobs, renderedAt }: { jobs: Job[
         <div className={"section-title section-title--split"}>
             <h2 className={"section-title__heading"}>
                 <a href={"#work-experience"}>
-                {`Work Experience`}
+                    {`Work Experience`}
                 </a>
             </h2>
             <span className={"section-title__meta"}>

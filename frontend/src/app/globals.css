@@ -71,6 +71,7 @@
 }
 
 @layer components {
+
     .site-header,
     .site-main,
     .site-footer {
@@ -385,6 +386,7 @@
     }
 
     @container site-section (width < 56rem) {
+
         .certification-list,
         .project-list {
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -425,6 +427,7 @@
 }
 
 @layer utilities {
+
     a:focus-visible,
     button:focus-visible,
     input:focus-visible,

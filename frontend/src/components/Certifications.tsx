@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import {Certification} from "@/app/data";
+import { Certification } from "@/app/data";
 
 
 
@@ -9,10 +9,10 @@ function CertificationItem({ certification, isExpired }: { certification: Certif
     return <div className={"certification-item"} style={{ filter: isExpired ? 'grayscale(100%)' : undefined }}>
         <a href={certification.url.toString()} target={"_blank"} rel={"noopener noreferrer"}>
             <Image src={certification.image}
-                   alt={`${certification.name} Badge`}
-                   width="200"
-                   height="200"
-                   priority
+                alt={`${certification.name} Badge`}
+                width="200"
+                height="200"
+                priority
             />
         </a>
     </div>
