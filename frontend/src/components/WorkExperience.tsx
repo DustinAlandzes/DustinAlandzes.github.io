@@ -4,7 +4,7 @@ import React from "react";
 import {Job} from "@/app/data";
 
 
-function JobItem({job}: {job: Job}): JSX.Element {
+function JobItem({job}: {job: Job}): React.JSX.Element {
     return <div>
         <h1>
             {job.url ?

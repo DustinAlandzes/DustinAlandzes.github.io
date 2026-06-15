@@ -19,7 +19,7 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -31,7 +31,7 @@ jobs:
           python-version: '3.12'
           cache: 'pip'
       - name: Install Dependencies
-        run: 'pip install -r requirements.txt -t ./package  --platform manylinux2014_x86_64 --only-binary=:all:'
+        run: 'python -m pip install -r requirements.txt -t ./package --platform manylinux2014_x86_64 --only-binary=:all:'
       - name: Archive the lambda function code and dependencies
         run: cp main.py package/main.py && cd package && zip -r ../deployment_package.zip . && cd ..
       - name: Push code to lambda

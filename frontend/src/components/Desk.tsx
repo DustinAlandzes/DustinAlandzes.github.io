@@ -21,8 +21,8 @@ type GLTFResult = GLTF & {
 }
 
 
-export default function Model(props: JSX.IntrinsicElements['group']) {
-    const {nodes, materials} = useGLTF('/desk-transformed.glb') as GLTFResult
+export default function Model(props: React.JSX.IntrinsicElements['group']) {
+    const {nodes, materials} = useGLTF('/desk-transformed.glb') as unknown as GLTFResult
     return (
         <group {...props} dispose={null}>
             <mesh geometry={nodes.wood_top.geometry} material={materials.aCG_Wood067_1K_JPG} position={[0, 2, 0]}/>

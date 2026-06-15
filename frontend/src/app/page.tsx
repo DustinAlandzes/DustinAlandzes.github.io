@@ -17,7 +17,7 @@ import ContactSection from "@/components/Contact";
 
 const vollkorn = Vollkorn({ subsets: ["latin"], weight: ['400'] });
 
-const Trail: React.FC<{ open: boolean, children: any }> = ({ open, children }) => {
+const Trail: React.FC<{ open: boolean, children: React.ReactNode }> = ({ open, children }) => {
   const items = React.Children.toArray(children)
   const trail = useTrail(items.length, {
     config: { mass: 5, tension: 2000, friction: 200 },
@@ -37,13 +37,19 @@ const Trail: React.FC<{ open: boolean, children: any }> = ({ open, children }) =
   )
 }
 
-function Header(): JSX.Element {
+function Header(): React.JSX.Element {
 
     const [open, setOpen] = useState(false)
 
     useEffect(() => {
-        setOpen(true)
-    }, [setOpen])
+        const frame = window.requestAnimationFrame(() => {
+            setOpen(true)
+        })
+
+        return () => {
+            window.cancelAnimationFrame(frame)
+        }
+    }, [])
 
     return <header>
         <div id={"name"} className={vollkorn.className}>
@@ -68,7 +74,7 @@ function BackToTheTop() {
     // https://cddm.medium.com/react-scroll-to-top-button-4440d4c4e4d4
     useEffect(() => {
         const handleScrollToTopButtonVisibility = () => {
-          window.scrollY < 300 ? setAtTheTop(true) : setAtTheTop(false);
+                    setAtTheTop(window.scrollY < 300);
         };
         handleScrollToTopButtonVisibility()
         window.addEventListener("scroll", handleScrollToTopButtonVisibility);
@@ -97,7 +103,7 @@ function Footer() {
     </footer>;
 }
 
-export default function Home(): JSX.Element {
+export default function Home(): React.JSX.Element {
     return (
         <>
             <Header/>

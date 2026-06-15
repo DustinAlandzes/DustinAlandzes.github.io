@@ -5,7 +5,7 @@ import {Certification} from "@/app/data";
 
 
 
-function CertificationItem({certification}: { certification: Certification }): JSX.Element {
+function CertificationItem({certification}: { certification: Certification }): React.JSX.Element {
     return <div className={"certification-item"} style={{filter: certification.expireDate < new Date() ? 'grayscale(100%)' : ''}}>
         <a href={certification.url.toString()} target={"_blank"}>
             <Image src={certification.image.src}

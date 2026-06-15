@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {SubmitHandler, useForm} from "react-hook-form";
 
-export default function ContactSection(): JSX.Element {
+export default function ContactSection(): React.JSX.Element {
     type FormValues = {
         name: string,
         email: string,
@@ -22,15 +22,25 @@ export default function ContactSection(): JSX.Element {
                 method: "POST",
                 body: JSON.stringify(data)
             })
+
+            if (!response.ok) {
+                setError('root.serverError', {
+                  type: String(response.status),
+                })
+                setSent(false)
+                return
+            }
+
             await response.json()
             setSent(true);
-        } catch (error: any) {
+        } catch {
             setError('root.serverError', {
-              type: error.statusCode,
+              type: 'network',
             })
             setSent(false)
+        } finally {
+            setSubmitting(false)
         }
-        setSubmitting(false)
     }
 
     if (sent) {
@@ -91,7 +101,7 @@ export default function ContactSection(): JSX.Element {
                                    id="contact-form-input-body"
                          />
                      </div>
-                     {errors?.root?.serverError.type === 400 && <p>server response message</p>}
+                     {errors?.root?.serverError.type === '400' && <p>server response message</p>}
 
                      <div className={"form-group"}>
                          <input type={"submit"} role={"button"} id={"submit-contact-button"} disabled={submitting}/>
