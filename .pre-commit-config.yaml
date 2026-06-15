@@ -1,18 +1,26 @@
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
     hooks:
-    -   id: check-yaml
-    -   id: check-json
-    -   id: end-of-file-fixer
-    -   id: trailing-whitespace
-    -   id: detect-aws-credentials
-- repo: https://github.com/astral-sh/ruff-pre-commit
-  # Ruff version.
-  rev: v0.6.2
-  hooks:
-    # Run the linter.
-    - id: ruff
-      args: [ --fix ]
-    # Run the formatter.
-    - id: ruff-format
+      - id: check-yaml
+      - id: check-json
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: detect-aws-credentials
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.15.17
+    hooks:
+      # Run the linter.
+      - id: ruff
+        args: [--fix]
+      # Run the formatter.
+      - id: ruff-format
+  - repo: local
+    hooks:
+      - id: next-lint
+        name: Next.js Lint
+        entry: cd frontend && npm run lint
+        language: system
+        files: \.(js|jsx|ts|tsx)$
+        pass_filenames: false

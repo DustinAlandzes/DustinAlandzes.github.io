@@ -5,10 +5,10 @@ Files: room.glb [27.41KB] > /Users/dustinalandzes/PycharmProjects/DustinAlandzes
 */
 
 import * as THREE from 'three'
-import {MeshPhongMaterial} from 'three'
+import { MeshPhongMaterial } from 'three'
 import React from 'react'
-import {useGLTF, useTexture} from '@react-three/drei'
-import {GLTF} from 'three-stdlib'
+import { useGLTF, useTexture } from '@react-three/drei'
+import { GLTF } from 'three-stdlib'
 
 type GLTFResult = GLTF & {
     nodes: {
@@ -20,11 +20,9 @@ type GLTFResult = GLTF & {
     }
 }
 
-type ContextType = Record<string, React.ForwardRefExoticComponent<JSX.IntrinsicElements['mesh']>>
-
-export default function Model(props: JSX.IntrinsicElements['group']) {
-    const {nodes, materials} = useGLTF('/room-transformed.glb') as GLTFResult
-    const transparentMaterial = new MeshPhongMaterial({transparent: true, opacity: 0.3})
+export default function Model(props: React.JSX.IntrinsicElements['group']) {
+    const { nodes } = useGLTF('/room-transformed.glb') as unknown as GLTFResult
+    const transparentMaterial = new MeshPhongMaterial({ transparent: true, opacity: 0.3 })
 
     const marbleTextureProps = useTexture({
         map: 'Marble015_1K-JPG/Marble015_1K-JPG_Color.jpg',
@@ -37,10 +35,10 @@ export default function Model(props: JSX.IntrinsicElements['group']) {
     return (
         <group {...props} dispose={null}>
             <mesh geometry={nodes.Room.geometry} scale={[4.267, 2.523, 4.204]}>
-                <meshStandardMaterial {...marbleTextureProps}/>
+                <meshStandardMaterial {...marbleTextureProps} />
             </mesh>
             <mesh geometry={nodes.Window.geometry} material={transparentMaterial} position={[-4.071, 0.368, -1.783]}
-                  rotation={[-Math.PI, 0, 0]} scale={[-0.227, -1.476, -1.121]}/>
+                rotation={[-Math.PI, 0, 0]} scale={[-0.227, -1.476, -1.121]} />
         </group>
     )
 }
